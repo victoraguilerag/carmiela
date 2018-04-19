@@ -8,9 +8,9 @@ body{
 
 .Layout {
   background: rgba(50,50,50,.1);
-  height: 100vh;
-  padding: 0 4vw;
-  width: 92vw;
+  min-height: 100vh;
+  padding: 0 3%;
+  width: 94%;
 }
 
 .header {
@@ -25,7 +25,8 @@ body{
 .header .titulo {
   font-family: 'Oswald';
   font-weight: 300;
-  font-size: 40px;
+  font-size: 2.2em;
+  letter-spacing: 2px;
   margin-bottom: 0;
 }
 
@@ -33,6 +34,7 @@ body{
   font-family: 'Source Sans Pro';
   margin-top: 0;
   font-size: 14px;
+  letter-spacing: 1.1px;
   color: rgba(50,50,50,.5);
 }
 
@@ -52,7 +54,7 @@ body{
   font-size: 14px;
   color: white;
 
-  box-shadow: inset 0 -5px 0 rgba(50,50,50,.2);
+  box-shadow: inset 0 -2px 0 rgba(50,50,50,.2);
 }
 
 .Menu .item {
@@ -63,6 +65,7 @@ body{
   justify-content: center;
   align-items: center;
 }
+
 .Menu .punto {
   width: 3px;
   height: 3px;
@@ -70,6 +73,165 @@ body{
   border-radius: 50%;
   background: rgba(255,255,255,.5);
 }
+
 .mobile {
   display: none;
+}
+
+.Contenido {
+  min-height: 100%;
+  height: 100%;
+  display: flex;
+  flex-flow: row nowrap;
+}
+
+.Articulo {
+  width: 100%;
+  padding: 50px 0;
+  background: white;
+}
+
+.Articulo .imagen {
+  width: 100%;
+  height: 35vw;
+  margin: 0;
+  background-size: cover !important;
+}
+
+.Articulo .titulo {
+  font-family: 'Oswald';
+  font-weight: 300;
+  padding: 0 5%;
+  margin: 25px 0;
+  color: rgba(0,0,0,.8);
+  letter-spacing: 2px;
+}
+
+.Articulo .ref {
+  width: 90%;
+  padding: 0 5%;
+  color: rgba(0, 0, 0, .4);
+  cursor: pointer;
+  display: inline;
+  font-family: "Droid Serif", Georgia, serif;
+  font-size: 12px;
+  font-style: italic;
+  font-weight: 300;
+  height: auto;
+  line-height: 18px;
+  text-align: left;
+  text-size-adjust: 100%;
+  width: auto;
+  word-wrap: break-word;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+.Articulo .fecha {
+  margin: 0;
+  height: 100%;
+  will-change: color;
+  transition: .5s;
+}
+
+.Articulo .fecha:hover {
+  color: rgba(0, 0, 0, .9);
+}
+
+.Articulo span {
+  width: 40%;
+  height: 20px;
+  margin: 0 5px;
+  will-change: color;
+  transition: .5s;
+}
+
+.Articulo span:hover {
+  color: rgba(0,0,0,.9);
+}
+
+.Articulo .resumen {
+  color: rgb(10, 10, 10);
+  font-family: "Source Sans Pro";
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 300;
+  padding: 0 5%;
+  line-height: 24px;
+}
+
+.Articulo #extender {
+  margin: 0 5px;
+  color: rgb(225, 18, 42);
+  cursor: pointer;
+}
+
+.Articulo #extender:hover {
+  color: rgba(0, 0, 0, .6);
+}
+
+.aside {
+  display: none;
+  height: 100%;
+  background: white;
+}
+
+#chinos {
+  background: url("./Assets/chinos.jpg");
+}
+
+
+
+@media screen and (min-width: 800px) {
+  .Articulos {
+    width: 70%;
+  }
+  .aside {
+    display: flex;
+    width: 30%;
+    height: 100vh;
+    position: relative;
+  }
+  .redes {
+    position: absolute;
+    top: 10%;
+    width: 100%;
+    display: flex;
+    flex-flow: column wrap;
+    justify-content: center;
+    align-items: center;
+  }
+  .redes h3 {
+    font-family: 'Source Sans Pro';
+    font-size: 14px;
+    font-weight: bold;
+    letter-spacing: 2px;
+    color: rgb(90, 90, 90);
+  }
+  .redes .simbolos {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    align-items: center;
+    width: 60%;
+    margin: 0 auto;
+    font-size: 1.8em;
+    color: rgb(225, 18, 42);  
+  }
+  .redes .simbolos i:hover {
+    color: rgb(170, 170, 170);
+  }
+  .redes .simbolos i {
+    margin: 0 5px;
+    cursor: pointer;
+  }
+  .imagen {
+    height: 25vw !important;
+  }
+}
+
+@media screen and (min-width: 1000px) {
+  .imagen {
+    height: 25vw !important;
+  }
 }
