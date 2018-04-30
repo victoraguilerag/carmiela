@@ -6,6 +6,12 @@ function Contenido () {
 		<div className="Contenido">
 			<div className="Articulos">
 				<Articulo />
+				<Articulo />
+				<Articulo />
+				<Articulo />
+				<Articulo />
+				<Articulo />
+				<Articulo />
 			</div>
 			<div className="aside">
 				<div className="redes">
@@ -17,6 +23,9 @@ function Contenido () {
 					</div>
 				</div>
 			</div>
+			<footer className="footer">
+				Crea un blog o un sitio web con wordpress
+			</footer>
 		</div>
 	)
 }

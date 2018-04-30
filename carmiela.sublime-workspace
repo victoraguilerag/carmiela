@@ -1,0 +1,1088 @@
+{
+	"auto_complete":
+	{
+		"selected_items":
+		[
+			[
+				"sliderI",
+				"sliderInterval"
+			],
+			[
+				"set",
+				"setState\tReact: setState()"
+			],
+			[
+				"hand",
+				"handleSliderLeft"
+			],
+			[
+				"SLI",
+				"sliderIndex"
+			],
+			[
+				"han",
+				"handleSliderPick"
+			],
+			[
+				"handle",
+				"handleSliderPick"
+			],
+			[
+				"bordr",
+				"border-radius"
+			],
+			[
+				"setTIme",
+				"setTimeForSlider"
+			],
+			[
+				"ha",
+				"handleSliderRight"
+			],
+			[
+				"defa",
+				"defaultValue"
+			],
+			[
+				"margin",
+				"margin-bottom"
+			],
+			[
+				"sea",
+				"searchEntities"
+			],
+			[
+				"d",
+				"dispatch"
+			],
+			[
+				"ge",
+				"getState"
+			],
+			[
+				"op",
+				"OPEN_MODAL"
+			],
+			[
+				"cl",
+				"CLOSE_MODAL"
+			],
+			[
+				"sear",
+				"searchEntities"
+			],
+			[
+				"search",
+				"searchResults"
+			],
+			[
+				"render",
+				"renderHeart"
+			],
+			[
+				"tra",
+				"transform"
+			],
+			[
+				"animation",
+				"animation-delay"
+			],
+			[
+				"tran",
+				"transitionName"
+			],
+			[
+				"back",
+				"background-position"
+			],
+			[
+				"bac",
+				"background-position"
+			],
+			[
+				"animatio",
+				"animation-iteration-count"
+			],
+			[
+				"tras",
+				"transition"
+			],
+			[
+				"transi",
+				"transitionEnterTimeout"
+			],
+			[
+				"animati",
+				"animation-timing-function"
+			],
+			[
+				"padd",
+				"padding-bottom"
+			],
+			[
+				"guit",
+				"guitarras"
+			],
+			[
+				"class",
+				"className"
+			],
+			[
+				"max-",
+				"max-width"
+			],
+			[
+				"le",
+				"letter-spacing"
+			],
+			[
+				"translate",
+				"translateY()"
+			],
+			[
+				"trans",
+				"transform"
+			],
+			[
+				"Cs",
+				"CSSTransitionGroup"
+			],
+			[
+				"margint",
+				"margin-left"
+			],
+			[
+				"anima",
+				"animation-name"
+			],
+			[
+				"backc",
+				"background-color"
+			],
+			[
+				"ease",
+				"ease-in-out"
+			],
+			[
+				"ro",
+				"rotate()"
+			],
+			[
+				"an",
+				"animationOut"
+			],
+			[
+				"box",
+				"box-sizing"
+			],
+			[
+				"align",
+				"align-items"
+			],
+			[
+				"play",
+				"playButton"
+			],
+			[
+				"transition",
+				"transition"
+			],
+			[
+				"he",
+				"height"
+			],
+			[
+				"alig",
+				"align-items"
+			],
+			[
+				"transla",
+				"translate3d()"
+			],
+			[
+				"per",
+				"perspective-origin"
+			],
+			[
+				"ab",
+				"absolute"
+			],
+			[
+				"transit",
+				"transition-delay"
+			],
+			[
+				"animat",
+				"animation-delay"
+			],
+			[
+				"animai",
+				"animation-delay"
+			],
+			[
+				"marg",
+				"margin"
+			],
+			[
+				"spa",
+				"space-around"
+			],
+			[
+				"produc",
+				"products"
+			],
+			[
+				"rg",
+				"rgba()"
+			],
+			[
+				"flex",
+				"flex-end"
+			],
+			[
+				"mar",
+				"margin-bottom"
+			],
+			[
+				"box-s",
+				"box-shadow"
+			],
+			[
+				"p",
+				"product2"
+			],
+			[
+				"slider",
+				"sliderIndex"
+			],
+			[
+				"slide",
+				"sliderIndex"
+			],
+			[
+				"over",
+				"overflow-x"
+			],
+			[
+				"lo",
+				"loguito"
+			],
+			[
+				"add",
+				"addEventListener\taddEventListener()"
+			],
+			[
+				"scrol",
+				"scrollTop"
+			],
+			[
+				"box-",
+				"box-shadow"
+			],
+			[
+				"bo",
+				"border-radius"
+			],
+			[
+				"setTie",
+				"setInterval\tsetInterval()"
+			],
+			[
+				"do",
+				"document"
+			],
+			[
+				"fle",
+				"flex-end"
+			],
+			[
+				"di",
+				"display"
+			],
+			[
+				"flex-",
+				"flex-start"
+			],
+			[
+				"margi",
+				"margin-top"
+			],
+			[
+				"font-",
+				"font-family"
+			],
+			[
+				"backgr",
+				"background"
+			],
+			[
+				"rgb",
+				"rgb()"
+			],
+			[
+				"F",
+				"handleFullScreenClick"
+			],
+			[
+				"ta",
+				"target"
+			],
+			[
+				"v",
+				"video"
+			],
+			[
+				"Vol",
+				"VolumenIcon"
+			],
+			[
+				"pro",
+				"ProgressBar"
+			],
+			[
+				"PLay",
+				"PlayPause"
+			],
+			[
+				"fel",
+				"flex-start"
+			],
+			[
+				"r",
+				"rgba()"
+			],
+			[
+				"Vide",
+				"VideoPlayerLayout"
+			],
+			[
+				"im",
+				"img"
+			],
+			[
+				"modal",
+				"modalVisible"
+			],
+			[
+				"handleCl",
+				"handleCloseModalClick"
+			],
+			[
+				"Home",
+				"HomeLayout"
+			],
+			[
+				"backr",
+				"background"
+			],
+			[
+				"ali",
+				"align-items"
+			],
+			[
+				"w",
+				"width\tAttr"
+			],
+			[
+				"hola",
+				"holaMundo"
+			],
+			[
+				"tranf",
+				"transform"
+			],
+			[
+				"text",
+				"text-decoration"
+			],
+			[
+				"text-a",
+				"text-align"
+			],
+			[
+				"hea",
+				"header\t<header>"
+			],
+			[
+				"MAR",
+				"margin"
+			],
+			[
+				"fun",
+				"function"
+			],
+			[
+				"resul",
+				"resultados"
+			],
+			[
+				"resu",
+				"resultados"
+			],
+			[
+				"max",
+				"max-width"
+			],
+			[
+				"ba",
+				"background"
+			],
+			[
+				"inlin",
+				"inline-block"
+			],
+			[
+				"cur",
+				"cursor"
+			],
+			[
+				"car",
+				"cargarCitas"
+			],
+			[
+				"off",
+				"offset-l1"
+			],
+			[
+				"año",
+				"añoac"
+			],
+			[
+				"selec",
+				"seleccion"
+			],
+			[
+				"pad",
+				"padding"
+			],
+			[
+				"bor",
+				"border-top"
+			],
+			[
+				"res",
+				"resultados"
+			],
+			[
+				"font",
+				"font-size"
+			],
+			[
+				"ofs",
+				"offset-l2"
+			],
+			[
+				"backg",
+				"background-position"
+			],
+			[
+				"pos",
+				"position"
+			],
+			[
+				"z",
+				"z-index"
+			],
+			[
+				"hhe",
+				"height"
+			],
+			[
+				"font-st",
+				"font-style"
+			],
+			[
+				"wid",
+				"width"
+			],
+			[
+				"bacl",
+				"background-color"
+			],
+			[
+				"bander",
+				"banderaAnual"
+			],
+			[
+				"actua",
+				"actualizar"
+			],
+			[
+				"wi",
+				"while"
+			],
+			[
+				"min",
+				"min-height"
+			]
+		]
+	},
+	"buffers":
+	[
+		{
+			"file": "/home/victor/Documentos/rprincipito/principito/src/App.js",
+			"settings":
+			{
+				"buffer_size": 4757,
+				"encoding": "UTF-8",
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "/home/victor/Documentos/rprincipito/principito/src/App.css",
+			"settings":
+			{
+				"buffer_size": 16322,
+				"encoding": "UTF-8",
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "/home/victor/Documentos/rprincipito/principito/src/catalogo/components/catalogo.js",
+			"settings":
+			{
+				"buffer_size": 1208,
+				"encoding": "UTF-8",
+				"line_ending": "Unix"
+			}
+		}
+	],
+	"build_system": "",
+	"build_system_choices":
+	[
+	],
+	"build_varint": "",
+	"command_palette":
+	{
+		"height": 392.0,
+		"last_filter": "Package Control: ",
+		"selected_items":
+		[
+			[
+				"Package Control: ",
+				"Package Control: Install Package"
+			],
+			[
+				"Package Control: ins",
+				"Package Control: Install Package"
+			]
+		],
+		"width": 479.0
+	},
+	"console":
+	{
+		"height": 118.0,
+		"history":
+		[
+		]
+	},
+	"distraction_free":
+	{
+		"menu_visible": true,
+		"show_minimap": false,
+		"show_open_files": false,
+		"show_tabs": false,
+		"side_bar_visible": false,
+		"status_bar_visible": false
+	},
+	"expanded_folders":
+	[
+		"/home/victor/Documentos/rprincipito/principito",
+		"/home/victor/Documentos/rprincipito/principito/src",
+		"/home/victor/Documentos/rprincipito/principito/src/catalogo",
+		"/home/victor/Documentos/rprincipito/principito/src/catalogo/components",
+		"/home/victor/Documentos/rprincipito/principito/src/slider",
+		"/home/victor/Documentos/rprincipito/principito/src/slider/components"
+	],
+	"file_history":
+	[
+		"//index.php",
+		"/home/victor/Documentos/rprincipito/principito/src/App.css",
+		"/home/victor/Documentos/rprincipito/principito/src/slider/components/slider.jsx",
+		"/home/victor/Documentos/rprincipito/principito/src/App.js",
+		"/home/victor/Documentos/rprincipito/principito/src/contacto/components/form.js",
+		"/home/victor/Documentos/rprincipito/principito/src/catalogo/components/catalogo.js",
+		"/home/victor/Documentos/Platzi/Redux/Redux/src/action-types/index.js",
+		"/home/victor/Documentos/Platzi/Redux/Redux/src/categories/components/categories.js",
+		"/home/victor/Documentos/Platzi/Redux/Redux/src/pages/containers/home.js",
+		"/home/victor/Documentos/Platzi/Redux/Redux/src/actions/index.js",
+		"/home/victor/Documentos/Platzi/Redux/Redux/src/reducers/index.js",
+		"/home/victor/Documentos/Platzi/Redux/Redux/src/reducers/is-loading.js",
+		"/home/victor/Documentos/Platzi/Redux/Redux/src/playlist/components/media.css",
+		"/home/victor/Documentos/Platzi/Redux/Redux/src/playlist/components/playlist.css",
+		"/home/victor/Documentos/Platzi/Redux/Redux/src/playlist/components/media.js",
+		"/home/victor/Documentos/Platzi/Redux/Redux/src/widgets/containers/search.js",
+		"/home/victor/Documentos/Platzi/Redux/Redux/src/entries/home.js",
+		"/home/victor/Documentos/Platzi/Redux/Redux/src/reducers/data.js",
+		"/home/victor/Documentos/Platzi/Redux/Redux/src/reducers/modal.js",
+		"/home/victor/Documentos/Platzi/Redux/Redux/middleware.txt",
+		"/home/victor/Documentos/Platzi/Redux/Redux/src/widgets/containers/modal.js",
+		"/home/victor/Documentos/Platzi/Redux/Redux/src/playlist/containers/media.js",
+		"/home/victor/Documentos/Platzi/Redux/Redux/src/widgets/components/modal.js",
+		"/home/victor/Documentos/Platzi/Redux/Redux/src/player/containers/video-player.js",
+		"/home/victor/Documentos/rprincipito/principito/package.json",
+		"/home/victor/Documentos/rprincipito/principito/build/index.html",
+		"/home/victor/Documentos/rprincipito/principito/src/modal/components/modal.js",
+		"/home/victor/Documentos/rprincipito/principito/src/footer/components/footer.js",
+		"/home/victor/Documentos/rprincipito/principito/src/slider/components/slidesOne.js",
+		"/home/victor/Documentos/rprincipito/principito/src/contacto/components/contacto.js",
+		"/home/victor/Documentos/rprincipito/principito/src/css/animations.css",
+		"/home/victor/Documentos/Aereolab/Challenge/coding-challenge/proto-html/index.html",
+		"/home/victor/Documentos/Platzi/Curso de Animaciones/likeTwitter.html",
+		"/home/victor/Documentos/Platzi/Curso de Animaciones/ProyectoReact/invie/src/components/Portada.js",
+		"/home/victor/Documentos/Platzi/Curso de Animaciones/ProyectoReact/invie/src/components/Heart.js",
+		"/home/victor/Documentos/Platzi/Curso de Animaciones/ProyectoReact/invie/src/Invie.js",
+		"/home/victor/Documentos/Platzi/Curso de Animaciones/ProyectoReact/invie/src/index.js",
+		"/home/victor/Documentos/Platzi/Curso de Animaciones/ProyectoReact/invie/src/css/animations.css",
+		"/home/victor/Documentos/Platzi/Curso de Animaciones/ProyectoReact/invie/src/css/invie.css",
+		"/home/victor/Documentos/Platzi/Curso de Animaciones/ProyectoReact/invie/src/components/Guitarras.js",
+		"/home/victor/Documentos/Platzi/Curso de Animaciones/ProyectoReact/invie/src/components/Footer.js",
+		"/home/victor/Documentos/rprincipito/principito/src/layout/components/layout.js",
+		"/home/victor/Documentos/carmiela/src/Menu/Menu.js",
+		"/home/victor/Documentos/carmiela/src/App.js",
+		"/home/victor/Documentos/carmiela/src/Contenido/Contenido.js",
+		"/home/victor/Documentos/carmiela/src/App.css",
+		"/home/victor/Documentos/carmiela/src/Layout/Layout.js",
+		"/home/victor/Documentos/carmiela/public/index.html",
+		"/home/victor/Documentos/carmiela/src/Articulos/Articulo.js",
+		"/home/victor/Documentos/carmiela/src/Articulos/Articulos.js",
+		"/home/victor/Documentos/carmiela/src/Header/Header.js",
+		"/home/victor/Documentos/Platzi/Curso de Animaciones/animacionesOlas.html",
+		"/home/victor/Documentos/Platzi/Curso de Animaciones/ProyectoReact/transiciones/src/App.js",
+		"/home/victor/Documentos/Platzi/Curso de Animaciones/ProyectoReact/transiciones/src/App.css",
+		"/home/victor/Documentos/Platzi/Curso de Animaciones/ProyectoReact/transiciones/package.json",
+		"/home/victor/Documentos/Platzi/Curso de Animaciones/ProyectoReact/transicion/src/App.js",
+		"/home/victor/Documentos/Platzi/Curso de Animaciones/notificaciones.html",
+		"/home/victor/Documentos/Platzi/Curso de Animaciones/AnimacionesConAnimateJs.html",
+		"/home/victor/Documentos/Platzi/Curso de Animaciones/EntradaySalida.html",
+		"/home/victor/Documentos/Platzi/Curso de Animaciones/Animaciones.html",
+		"/home/victor/Documentos/Platzi/Curso de Animaciones/TransformacionTranslate.html",
+		"/home/victor/Documentos/Platzi/Curso de Animaciones/logoPlatzi.html",
+		"/home/victor/Documentos/rprincipito/principito/src/api/products.js",
+		"/home/victor/Documentos/Platzi/Curso de Animaciones/AnimacionesWillChange.html",
+		"/home/victor/Documentos/Platzi/Curso de Animaciones/CurvaBezier.html",
+		"/home/victor/Documentos/Platzi/Curso de Animaciones/MultiplesAnimaciones.html",
+		"/home/victor/Documentos/Platzi/Curso de Animaciones/PuntoDeTransfromacion.html",
+		"/home/victor/Documentos/Platzi/Curso de Animaciones/TransformacionSesgazo.html",
+		"/home/victor/Documentos/Platzi/Curso de Animaciones/TransformacionEscala.html",
+		"/home/victor/Documentos/Platzi/Curso de Animaciones/TransformacionRotacion.html",
+		"/home/victor/Documentos/Platzi/Curso de Animaciones/transformaciones.html",
+		"/home/victor/Documentos/Platzi/Curso de Animaciones/Transiciones.html",
+		"/home/victor/Documentos/Platzi/Curso de Animaciones/interacciones.html",
+		"/home/victor/Documentos/rprincipito/principito/src/cargando/components/cargando.js",
+		"/home/victor/Documentos/rprincipito/principito/public/index.html",
+		"/home/victor/Documentos/rprincipito/principito/src/barra/pace.min.js",
+		"/home/victor/Documentos/rprincipito/principito/src/cargando/cargando.js",
+		"/home/victor/Documentos/rprincipito/principito/src/servicios/components/servicios.js",
+		"/home/victor/Documentos/rprincipito/principito/src/producto/components/producto.js",
+		"/home/victor/Documentos/rprincipito/principito/src/contacto/components/form-123.js",
+		"/home/victor/Documentos/rprincipito/principito/src/descripcion/components/descripcion.js",
+		"/home/victor/Documentos/rprincipito/principito/src/slider/components/slidesTwo.js",
+		"/home/victor/Documentos/rprincipito/principito/src/slider/components/slidesThree.js",
+		"/home/victor/Documentos/rprincipito/principito/src/header/components/header.js",
+		"/home/victor/Documentos/rprincipito/principito/node_modules/hosted-git-info/git-host.js",
+		"/home/victor/Documentos/principito/index.html",
+		"/home/victor/Documentos/rprincipito/principito/src/footer/footer.js",
+		"/home/victor/Documentos/rprincipito/principito/src/descripcion/descripcion.js",
+		"/home/victor/Documentos/principito/css/index.css",
+		"/home/victor/Documentos/Blog/index.css",
+		"/home/victor/Documentos/Alderaan/Alderaan-4.0/index.html",
+		"/home/victor/Documentos/Blog/index.html",
+		"/home/victor/Documentos/Platzi/Curso de React/src/player/components/video-player-layout.js",
+		"/home/victor/Documentos/Platzi/Curso de React/index.html",
+		"/home/victor/Documentos/Platzi/Curso de React/src/player/components/full-screen.js",
+		"/home/victor/Documentos/Platzi/Curso de React/src/player/components/title.js",
+		"/home/victor/Documentos/Platzi/Curso de React/src/player/containers/video-player.js",
+		"/home/victor/Documentos/Platzi/Curso de React/src/pages/containers/home.js",
+		"/home/victor/Documentos/Platzi/Curso de React/webpack.config.js",
+		"/home/victor/Documentos/Platzi/Curso de React/src/playlist/components/media/index.js",
+		"/home/victor/Documentos/Platzi/Curso de React/src/playlist/components/playlist.js",
+		"/home/victor/Documentos/Platzi/Curso de React/src/playlist/components/media/media.css",
+		"/home/victor/Documentos/Platzi/Curso de React/src/widgets/components/modal.js",
+		"/home/victor/Documentos/Platzi/Curso de React/src/player/components/video-player-controls.css",
+		"/home/victor/Documentos/Platzi/Curso de React/src/icons/components/full-screen.js",
+		"/home/victor/Documentos/Platzi/Curso de React/src/icons/components/volume.js",
+		"/home/victor/Documentos/Platzi/Curso de React/src/player/components/full-screen.css",
+		"/home/victor/Documentos/Platzi/Curso de React/src/icons/components/icon.js",
+		"/home/victor/Documentos/Platzi/Curso de React/src/player/components/volume.js",
+		"/home/victor/Documentos/Platzi/Curso de React/src/player/components/volume.css",
+		"/home/victor/Documentos/Platzi/Curso de React/src/player/components/progress-bar.js",
+		"/home/victor/Documentos/Platzi/Curso de React/src/player/components/spinner.js",
+		"/home/victor/Documentos/Platzi/Curso de React/src/player/components/timer.js",
+		"/home/victor/Documentos/Platzi/Curso de React/src/player/components/video-player-controls.js",
+		"/home/victor/Documentos/Platzi/Curso de React/src/player/components/video.js",
+		"/home/victor/Documentos/Platzi/Curso de React/src/player/components/progress-bar.css",
+		"/home/victor/Documentos/Platzi/Curso de React/src/player/components/spinner.css",
+		"/home/victor/Documentos/Platzi/Curso de React/src/player/components/utils.js",
+		"/home/victor/Documentos/Platzi/Curso de React/src/player/components/video-player-layout.css",
+		"/home/victor/Documentos/Platzi/Curso de React/src/player/containers/timer.js",
+		"/home/victor/Documentos/Platzi/Curso de React/src/player/containers/timer.css",
+		"/home/victor/Documentos/Platzi/Curso de React/src/player/components/play-pause.css",
+		"/home/victor/Documentos/Platzi/Curso de React/src/player/components/play-pause.js",
+		"/home/victor/Documentos/Platzi/Curso de React/src/player/components/video.css",
+		"/home/victor/Documentos/Platzi/Curso de React/src/player/components/title.css",
+		"/home/victor/Documentos/workshop/pages/index.js",
+		"/home/victor/Documentos/workshop/pages/about.js",
+		"/home/victor/Documentos/workshop/pages/story.js"
+	],
+	"find":
+	{
+		"height": 38.0
+	},
+	"find_in_files":
+	{
+		"height": 98.0,
+		"where_history":
+		[
+			"/home/victor/Documentos/rprincipito/principito/src",
+			"/home/victor/Documentos/Platzi/Curso de React/src",
+			"/home/victor/Documentos/rprincipito/principito/src",
+			"/home/victor/Documentos/Platzi/Curso de React",
+			"/home/victor/Documentos/Platzi/Curso de React/src",
+			"/home/victor/Documentos/Platzi/Curso de React",
+			"/home/victor/Documentos/Platzi/Curso de React/src",
+			"/home/victor/Documentos/Medicodigital/NewFront/src/new/app",
+			"/home/victor/Documentos/Medicodigital/Front/src/1.0",
+			"/home/victor/Documentos/Medicodigital/Front/src/mvp",
+			"/home/victor/Documentos/Medicodigital/Front/src/1.0",
+			"/home/victor/Documentos/Medicodigital/Front/src",
+			"/home/victor/Documentos/Medicodigital/Front/src/1.0",
+			"/home/victor/Documentos/Medicodigital/Front/src",
+			"/home/victor/Documentos/Medicodigital/DB"
+		]
+	},
+	"find_state":
+	{
+		"case_sensitive": false,
+		"find_history":
+		[
+			"setTime",
+			"console.log",
+			"intervalId",
+			"time",
+			"log",
+			"class",
+			"10px",
+			"20px",
+			"pick",
+			"indicador",
+			"\"",
+			"slider",
+			"selected",
+			"OPEN_MODAL",
+			"modal",
+			" './",
+			"return",
+			"action",
+			"accion",
+			"acciones",
+			"mediaId",
+			"openModal",
+			"mediaId",
+			"id",
+			"mediaId",
+			"media",
+			"visibility",
+			"const",
+			"get",
+			"api",
+			"first",
+			"left",
+			"index",
+			"transform",
+			"transitionLeaveTimeout",
+			"false",
+			"transitionEnterTimeout",
+			"translateY",
+			"logoPortada",
+			".background",
+			"false",
+			"enter",
+			"flicker;",
+			"flicker",
+			"500",
+			"store",
+			"tu",
+			"Liviana",
+			"Acustica",
+			"classic",
+			"easterA",
+			"classic",
+			"invie",
+			"src",
+			"\" ",
+			"store",
+			"red",
+			"left",
+			"title",
+			"guitarra",
+			"{}\n",
+			"guitarra",
+			"guitar",
+			"derecha",
+			"Incluye",
+			"acustica",
+			"data",
+			"acustina",
+			"checked",
+			"for=",
+			"class=",
+			"Guitarras",
+			"class=",
+			"Class",
+			"class",
+			"Invie",
+			"Portada",
+			"class",
+			"logo",
+			"div",
+			"App",
+			"100",
+			"130",
+			"150",
+			"around",
+			" -",
+			"space",
+			"center",
+			"Contenido",
+			"Articulo",
+			"Articulos",
+			"50",
+			"64",
+			":",
+			";",
+			":",
+			"Header",
+			"circulo",
+			"first",
+			".data",
+			"hidden",
+			".right {",
+			".right",
+			"right",
+			"circulo",
+			"25",
+			"45",
+			"45deg",
+			"let",
+			"hidden",
+			"modal",
+			"7dc800",
+			"primary",
+			"button",
+			"btn",
+			"cuadrado",
+			"base",
+			"blue",
+			"bottom",
+			"left",
+			".;",
+			"cantidad",
+			"masa",
+			"Masa",
+			"plastilina",
+			"Plastilina",
+			"agenda",
+			"Principito"
+		],
+		"highlight": true,
+		"in_selection": false,
+		"preserve_case": false,
+		"regex": true,
+		"replace_history":
+		[
+			"../header-second"
+		],
+		"reverse": false,
+		"show_context": true,
+		"use_buffer2": true,
+		"whole_word": false,
+		"wrap": true
+	},
+	"folders":
+	[
+		{
+			"path": "/home/victor/Documentos/rprincipito/principito"
+		}
+	],
+	"groups":
+	[
+		{
+			"selected": 1,
+			"sheets":
+			[
+				{
+					"buffer": 0,
+					"file": "/home/victor/Documentos/rprincipito/principito/src/App.js",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 4757,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								2375,
+								2375
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Simple JSX/JSX.sublime-syntax",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 808.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 1,
+					"type": "text"
+				},
+				{
+					"buffer": 1,
+					"file": "/home/victor/Documentos/rprincipito/principito/src/App.css",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 16322,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								6928,
+								6928
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/CSS/CSS.sublime-syntax",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 4786.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 0,
+					"type": "text"
+				},
+				{
+					"buffer": 2,
+					"file": "/home/victor/Documentos/rprincipito/principito/src/catalogo/components/catalogo.js",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 1208,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								601,
+								601
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/JavaScript/JavaScript.sublime-syntax",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 2,
+					"type": "text"
+				}
+			]
+		}
+	],
+	"incremental_find":
+	{
+		"height": 22.0
+	},
+	"input":
+	{
+		"height": 40.0
+	},
+	"layout":
+	{
+		"cells":
+		[
+			[
+				0,
+				0,
+				1,
+				1
+			]
+		],
+		"cols":
+		[
+			0.0,
+			1.0
+		],
+		"rows":
+		[
+			0.0,
+			1.0
+		]
+	},
+	"menu_visible": true,
+	"output.find_results":
+	{
+		"height": 0.0
+	},
+	"pinned_build_system": "",
+	"project": "",
+	"replace":
+	{
+		"height": 40.0
+	},
+	"save_all_on_build": true,
+	"select_file":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"select_project":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"select_symbol":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"selected_group": 0,
+	"settings":
+	{
+	},
+	"show_minimap": true,
+	"show_open_files": false,
+	"show_tabs": true,
+	"side_bar_visible": false,
+	"side_bar_width": 179.0,
+	"status_bar_visible": true,
+	"template_settings":
+	{
+	}
+}

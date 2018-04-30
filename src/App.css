@@ -8,7 +8,6 @@ body{
 
 .Layout {
   background: rgba(50,50,50,.1);
-  min-height: 100vh;
   padding: 0 3%;
   width: 94%;
 }
@@ -79,16 +78,15 @@ body{
 }
 
 .Contenido {
-  min-height: 100%;
-  height: 100%;
   display: flex;
-  flex-flow: row nowrap;
+  flex-flow: row wrap;
 }
 
 .Articulo {
   width: 100%;
-  padding: 50px 0;
+  padding-top: 50px;
   background: white;
+  padding-bottom: 10px;
 }
 
 .Articulo .imagen {
@@ -172,9 +170,21 @@ body{
 
 .aside {
   display: none;
-  height: 100%;
   background: white;
 }
+
+.footer {
+  width: 100%;
+  height: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: rgba(250,250,250,.5);
+  background: rgba(40,40,40,1);
+}
+
+
+
 
 #chinos {
   background: url("./Assets/chinos.jpg");
@@ -189,12 +199,11 @@ body{
   .aside {
     display: flex;
     width: 30%;
-    height: 100vh;
     position: relative;
   }
   .redes {
     position: absolute;
-    top: 10%;
+    top: 5%;
     width: 100%;
     display: flex;
     flex-flow: column wrap;
