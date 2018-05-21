@@ -1,24 +1,28 @@
-import React from 'react'
-import Articulo from '../Articulo/Articulo.js'
+import React, { Component } from 'react'
+import Previa from '../Previa/Previa.js'
+import Aside from './components/Aside.js'
+import { connect } from 'react-redux'
 
-function Contenido () {
-	return (
-		<div className="Contenido">
-			<div className="Articulos">
-				<Articulo />
+
+class Contenido extends Component {
+	render() {
+		return (
+			<div className="Contenido">
+				{
+					this.props.articulos.map((articulo, index)=>{
+						return <Previa id={articulo.id} titulo={articulo.titulo} data={articulo.previa} portada={articulo.portada} key={index}/>
+					})
+				}
+				<Aside />
 			</div>
-			<div className="aside">
-				<div className="redes">
-					<h3>- SÍGUEME -</h3>
-					<div className="simbolos">
-						<i class="fab fa-instagram"></i>
-						<i class="fab fa-twitter"></i>
-						<i class="fab fa-facebook"></i>
-					</div>
-				</div>
-			</div>
-		</div>
-	)
+		)
+	}
 }
 
-export default Contenido
+function mapStateToProps(state, props) {
+	return {
+		articulos: state.articulos
+	}
+}
+
+export default connect(mapStateToProps)(Contenido)

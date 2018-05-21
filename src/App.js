@@ -1,21 +1,35 @@
 import React, { Component } from 'react';
-import logo from './logo.svg';
 import Layout from './Layout/Layout.js'
-import Header from './Header/Header.js'
-import Menu from './Menu/Menu.js'
 import Contenido from './Contenido/Contenido.js'
+import Articulo from './Contenido/components/Articulo.js'
+import Contacto from './Contacto/Contacto.js'
+import Experiencia from './Experiencia/Experiencia.js'
 import './App.css';
+import { Route, Redirect } from 'react-router-dom'
+
 
 class App extends Component {
   render() {
     return (
       <Layout>
-        <Header />
-        <Menu />
-        <Contenido />
-      </Layout>
+
+        <Route path="/" exact component={Contenido} />
+        <Route path="/contacto/" exact component={Contacto} />
+        <Route path="/experiencia/" exact component={Experiencia} />
+        <Route path="/articulo/:id" exact component={Articulo} />
+    </Layout>
     );
   }
 }
+// <Route path="/articulo/:id" exact component={Articulo} />
+
+// const Home = () => {
+//   <Layout>
+//     <Header />
+//     <Menu />
+//     <Contenido />
+//     <Contenido />
+//   </Layout>
+// }
 
 export default App;

@@ -1,0 +1,47 @@
+<div src="imagen" id="chinos" className="imagen"></div>
+<h2 className="titulo"><a>LAS SOBRAS DE CHINA: MUJERES QUE NO SE HAN CASADO ANTES DE LOS 30</a></h2>
+<div className="ref">
+  <p className="fecha">17 abril, 2018 </p>
+</div>
+<p className="texto">
+      En China, si eres una mujer soltera antes de llegar a tus 30,
+      eres oficialmente un fracaso. O al menos, una persona menos valiosa,
+      un mal innecesario que sólo trae vergüenza a la familia.
+      ¿Suena demasiado radical? Pues en esta sociedad asiática es normal y
+      el mismo Ministro de Educación de ese país le dio un nombre en 2007: “Sheng nu”,
+      que en inglés se traduce a “Leftover women”.
+</p>
+<p className="texto">
+  Es decir, mujeres sobrantes… Mujeres que son sobras.
+</p>
+<p className="texto">
+  La presión comienza a partir de los 27, en otras familias más estrictas,
+  un poco antes. Y esta carrera para iniciar una familia no tiene nada que ver
+  con amor o ideas románticas, es más un arreglo que se relaciona con el estatus
+  social y económico.
+</p>
+<p className="texto">
+  Pero en una cultura que se globaliza rápidamente y una economía
+  que pronto se coronará como la primera del mundo, un gran porcentaje
+  de mujeres no se conformarán con tener un esposo y una casita para limpiar.
+  Más y más chicas deciden perseguir su propio estilo de vida, aunque el gobierno
+  y sus familias las presionen para elegir un destino ya escrito.
+</p>
+<div className="seccion">
+  UNA PREOCUPACIÓN PARA EL ESTADO
+</div>
+<p className="texto">
+  Desde que se instauró la ley del hijo único en China en 1979, se produjo un desbalance entre géneros,
+  cuyas consecuencias se comenzaron a notar mucho después. Para 2020,
+  se estima que habrá 24 millones de hombres más que mujeres en China,
+  arriesgando el crecimiento constante.
+</p>
+<p className="texto">
+  Si bien esta política favoreció a los chinos en algunos aspectos,
+  provocó el mayor índice de abortos selectivos, pues las familias preferían
+  engendrar niños. Ya sea por una cuestión cultural o porque era un lazo de
+  herencia directa. La cuestión es que, según cifras del gobierno,
+  se previnieron 400 millones de embarazos. La mitad –o un poco más-
+  siendo las mujeres que hacen falta hoy.
+</p>
+<img id="boda" width="90%" />
