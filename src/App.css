@@ -37,6 +37,30 @@ body{
   color: rgba(50,50,50,.5);
 }
 
+.expHeader {
+  position: absolute;
+  height: 5vh;
+  background: rgba(255,255,255,.5);
+  display: flex;
+  width: 100%;
+  justify-content: center;
+  align-items: center;
+}
+
+.expHeader a {
+  font-family: "Source Sans Pro";
+  width: 200px;
+  color: rgb(70, 70, 70);
+  font-weight: bold;
+  text-align: center;
+  cursor: pointer;
+  transition: .5s;
+  text-decoration: none;
+}
+.expHeader a:hover {
+  color: #f25f70;
+  transition: .5s;
+}
 .Menu {
   background: #f25f70;
   height: 55px;
@@ -98,25 +122,32 @@ body{
 }
 
 .Articulos {
-  margin-bottom: 100px;
+  width: 100%;
   border-bottom: solid rgba(200,200,200,.3) 1px;
 }
 
-.Articulo {
-  width: 70%;
+.Previa {
   padding-top: 50px;
   background: white;
   padding-bottom: 10px;
+
 }
 
-.Articulo .imagen {
+.Articulo {
+  width: 100%;
+  padding-top: 50px;
+  background: white;
+  padding-bottom: 50px;
+}
+
+.Articulo .imagen, .Previa .imagen {
   width: 100%;
   height: 35vw;
   margin: 0;
   background-size: cover !important;
 }
 
-.Articulo .titulo, .informacion .titulo, .experiencia .titulo {
+.Articulo .titulo,.Previa .titulo, .informacion .titulo, .experiencia .titulo {
   font-family: 'Oswald';
   font-weight: 300;
   padding: 0 5%;
@@ -124,23 +155,20 @@ body{
   letter-spacing: 2px;
 }
 
-.Articulo .titulo a {
+.Articulo .titulo a, .Previa .titulo a {
   text-decoration: none;
   color: rgba(0,0,0,.8);
-
-}
-
-.Articulo .titulo a {
   cursor: pointer;
   will-change: color;
   transition: .5s;
+
 }
 
-.Articulo .titulo:hover a {
+.Articulo .titulo:hover a, .Previa .titulo:hover a {
   color: #e1122a;
 }
 
-.Articulo .ref {
+.Articulo .ref, .Previa .ref {
   width: 90%;
   padding: 0 5%;
   color: rgba(0, 0, 0, .4);
@@ -160,18 +188,18 @@ body{
   justify-content: flex-start;
   align-items: center;
 }
-.Articulo .fecha {
+.Articulo .fecha, .Previa .fecha {
   margin: 0;
   height: 100%;
   will-change: color;
   transition: .5s;
 }
 
-.Articulo .fecha:hover {
+.Articulo .fecha:hover, .Previa .fecha:hover {
   color: rgba(0, 0, 0, .9);
 }
 
-.Articulo span {
+.Previa span {
   width: 40%;
   height: 20px;
   margin: 0 5px;
@@ -179,11 +207,11 @@ body{
   transition: .5s;
 }
 
-.Articulo span:hover {
+.Previa span:hover {
   color: rgba(0,0,0,.9);
 }
 
-.Articulo .resumen {
+.Previa .resumen {
   color: rgb(10, 10, 10);
   font-family: "Source Sans Pro";
   font-size: 16px;
@@ -194,20 +222,28 @@ body{
   margin-bottom: 50px;
 }
 
-.Articulo #extender {
+.Previa #extender {
   margin: 0 5px;
   color: rgb(225, 18, 42);
   cursor: pointer;
 }
 
-.Articulo #extender:hover {
+.Previa #extender:hover {
   color: rgba(0, 0, 0, .6);
 }
 
 .Articulo .seccion {
-  margin-top: 0 !important;
+  margin-top: 50px;
   margin-left: 5% !important;
   font-size: 21px !important;
+}
+
+.Articulo .seccion.poemario {
+  font-size: 2.1rem;
+  font-weight: 300;
+  letter-spacing: 2px;
+  margin-bottom: 20px;
+  margin-top: 50px;
 }
 
 .Articulo .texto {
@@ -221,8 +257,15 @@ body{
   margin-bottom: 25px;
 }
 
-.Articulo .video {
-  padding: 0 5%;
+.Articulo .texto.poemario {
+  line-height: 3;
+  width: 56%;
+}
+
+.video {
+  width: 100% !important;
+  /* height: 100%; */
+  margin: 0 auto;
 }
 
 .aside {
@@ -277,13 +320,14 @@ body{
   background-color: white;
   height: 78vh;
   overflow-y: scroll;
+  position: relative;
 }
 
 .experiencia {
   width: 50%;
-  height: 200vh;
   padding: 0 5%;
   background: rgba(250,250,250,.9);
+  min-height: 800%;
   display: flex;
   align-items: center;
   flex-flow: column nowrap;
@@ -355,20 +399,24 @@ body{
   display: flex;
   justify-content: center;
   align-items: center;
-  color: rgba(250,250,250,.5);
+  color: rgba(250,250,250,1);
   background: rgba(40,40,40,1);
+  font-family: 'Source Sans Pro';
+  font-weight: bold;
 }
 
-
+.footer .simbolos {
+  display: none;
+}
 /* Imagenes */
 
 .imagenArticulo {
-  background-size: cover;
-  background-position: center;
+  background-size: cover !important;
+  background-position: center !important;
   min-height: 300px;
-  min-width: 95% !important;
+  min-width: 30% !important;
   border: none;
-  margin-left: 5%;
+  margin: 0 auto
 }
 
 /* Articulo 0 */
@@ -403,10 +451,16 @@ body{
   background: url(./Assets/flowerboy.jpg)
 }
 #flowerboy-2 {
-  background: url(./Assets/flowerboy-2.jpg)
+  background: url(./Assets/flowerboy-2.jpg);
+  width: 500px;
+  height: 600px;
 }
 #flowerboy-3 {
-  background: url(./Assets/flowerboy-3.gif)
+  background: url(./Assets/flowerboy-3.gif);
+  background-size: cover;
+  width: 450px !important;
+  height: 600px;
+  margin: 0 auto;
 }
 #flowerboy-5 {
   background: url(./Assets/flowerboy-5.gif)
@@ -483,11 +537,65 @@ body{
 }
 
 
+@media screen and (min-width:200px) {
+  .Layout {
+    width: 94%;
+    padding: 0 3%;
+  }
+  .imagenPrevia {
+    height: 40vw !important;
+    background-size: cover !important;
+    background-position: center !important;
+  }
+}
+@media screen and (min-width:600px) {
+  .imagenPrevia {
+    height: 25vw !important;
+  }
+  .experiencia {
+    min-height: 640%;
+  }
+}
+@media screen and (min-width:900px) {
+  .experiencia {
+    min-height: 680%;
+  }
+}
+@media screen and (min-width:1000px) {
+  .Previa {
 
+    height: 700px;
+    position: relative;
+  }
+
+  .data-text {
+    width: 60%;
+    margin-left: 40%;
+    position: absolute;
+    background: white;
+    bottom: 78px;
+  }
+  .video {
+    /* height: 50vh !important; */
+    width: 70% !important;
+    padding: 0 10%;
+    margin: 5% auto;
+  }
+}
 @media screen and (min-width: 800px) {
+  .Layout {
+    width: 80%;
+    padding: 0 10%;
+  }
   .Articulos {
     width: 70%;
+    background-color: white;
   }
+  .imagenArticulo {
+    height: 40vh !important;
+    margin: 5% auto !important;
+  }
+
   .aside {
     display: flex;
     width: 30%;
@@ -495,12 +603,16 @@ body{
   }
   .redes {
     position: fixed;
-    top: 30%;
-    right: 6vw;
-    width: 200px;
+    top: 25%;
+    width: 25%;
+    margin: 0 3%;
+    display: -ms-flexbox;
     display: flex;
+    -ms-flex-flow: column wrap;
     flex-flow: column wrap;
+    -ms-flex-pack: center;
     justify-content: center;
+    -ms-flex-align: center;
     align-items: center;
   }
   .redes h3 {
@@ -510,7 +622,8 @@ body{
     letter-spacing: 2px;
     color: rgb(90, 90, 90);
   }
-  .redes .simbolos {
+
+  .simbolos {
     display: flex;
     flex-flow: row wrap;
     justify-content: center;
@@ -518,22 +631,33 @@ body{
     width: 60%;
     margin: 0 auto;
     font-size: 1.8em;
+  }
+  .simbolos i {
+    margin: 0 6px;
+    cursor: pointer;
+  }
+  .redes .simbolos {
     color: rgb(225, 18, 42);
   }
   .redes .simbolos i:hover {
     color: rgb(170, 170, 170);
   }
-  .redes .simbolos i {
-    margin: 0 5px;
-    cursor: pointer;
-  }
-  .imagen {
-    height: 25vw !important;
-  }
-}
 
-@media screen and (min-width: 1000px) {
+  .footer .simbolos {
+    display: flex;
+    color: rgba(250,250,250,.5);
+    position: absolute;
+    right: 0;
+  }
+  .footer .simbolos i:hover {
+    color: white;
+  }
   .imagen {
-    height: 25vw !important;
+    height: 17vw !important;
+    background-size: cover !important;
+  }
+  .imagenPrevia {
+    height: 17vw;
+    background-size: cover !important;
   }
 }

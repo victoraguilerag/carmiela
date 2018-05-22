@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import Layout from './Layout/Layout.js'
 import Contenido from './Contenido/Contenido.js'
-import Articulo from './Contenido/components/Articulo.js'
+import Lector from './Lector/Lector.js'
 import Contacto from './Contacto/Contacto.js'
 import Experiencia from './Experiencia/Experiencia.js'
 import './App.css';
@@ -16,7 +16,7 @@ class App extends Component {
         <Route path="/" exact component={Contenido} />
         <Route path="/contacto/" exact component={Contacto} />
         <Route path="/experiencia/" exact component={Experiencia} />
-        <Route path="/articulo/:id" exact component={Articulo} />
+        <Route path="/articulo/:id" exact component={Lector} />
     </Layout>
     );
   }

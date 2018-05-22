@@ -1,18 +1,25 @@
 import React from 'react'
 import Articulo from '../../Previa/Previa.js'
+import { connect } from 'react-redux'
+import Previa from '../../Previa/Previa.js'
 
-function Articulos () {
+function Articulos (props) {
   return (
     <div className="Articulos">
-      <Articulo />
-      <Articulo />
-      <Articulo />
-      <Articulo />
-      <Articulo />
-      <Articulo />
-      <Articulo />
+      {
+        props.articulos.map((articulo, index)=>{
+          return <Previa id={articulo.id} titulo={articulo.titulo} data={articulo.previa} portada={articulo.portada} key={index}/>
+        })
+      }
     </div>
   )
 }
 
-export default Articulos
+function mapStateToProps(state, props) {
+	return {
+		articulos: state.articulos
+	}
+}
+
+
+export default connect(mapStateToProps)(Articulos)

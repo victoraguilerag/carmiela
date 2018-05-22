@@ -1,9 +1,11 @@
 import React from 'react'
+import Simbolos from '../Contenido/components/Simbolos'
 
 function Footer () {
   return (
     <footer className="footer">
-      Crea un blog o un sitio web con wordpress
+      Carmen Daniela Veliz Dominguez
+      <Simbolos />
     </footer>
   )
 }

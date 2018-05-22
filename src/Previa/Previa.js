@@ -3,8 +3,9 @@ import { Link } from 'react-router-dom'
 
 function Previa (props) {
 	return (
-		<div className="Articulo">
-			<div src="imagen" id={props.portada} className="imagen"></div>
+		<div className="Previa">
+			<div src="imagen" id={props.portada} className="imagenPrevia"></div>
+			<div class="data-text">
 			<h2 className="titulo">
 					<Link to={`/articulo/${props.id}`}>{props.titulo}</Link>
 			</h2>
@@ -16,6 +17,7 @@ function Previa (props) {
 				{props.data} …
 				<Link to={`/articulo/${props.id}`} id="extender" className="extender" >Sigue Leyendo</Link>
 			</p>
+		</div>
 		</div>
 	)
 }

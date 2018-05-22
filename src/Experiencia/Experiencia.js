@@ -4,7 +4,11 @@ function Experiencia () {
 	return (
 		<div className="">
 			<div id="experiencia" className="bExperiencia">
-				<div className="experiencia">
+				<div className="expHeader">
+					<a href="#exp" className="expElement">Experiencia</a>
+					<a href="#skills" className="expElement">Skills</a>
+				</div>
+				<div className="experiencia" id="exp">
 					<h2 className="titulo">EXPERIENCIA</h2>
 					<div className="seccion">EDUCACION</div>
 					<div className="subseccion">Fundación Universidad de Oriente.</div>
@@ -41,7 +45,33 @@ function Experiencia () {
 					<ul>
 						<li><strong>Copywriter:</strong> Redacción de noticias, reseñas, especiales y tops dedicados al cine para Cápsula Cinéfila, blog de culturizando.com , producción de posts sobre el material para Instagram, Twitter y Facebook.</li>
 					</ul>
-				</div>
+					<div className="subseccion">Entre Largos y Cortos de Oriente – Septiembre 2016 (<a>@festivalcinelco</a>)</div>
+					<p>Festival de cine oriental que expone y premia obras cinematográficas en Anzoátegui, Monagas, Nueva Esparta y Sucre. Ofrece talleres y exposiciones públicas para comunidades de bajos recursos incentivando la cultura de cine nacional.</p>
+					<ul>
+						<li><strong>Organizadora / Equipo Creativo:</strong>Preparación y promoción de la ceremonia de clausura del Festival, un evento con presentaciones musicales, números de teatro y pintura en vivo en el Centro Comercial Plaza Mayor. Parte del equipo de protocolo y calidad durante las proyecciones gratuitas.</li>
+					</ul>
+					<div className="subseccion">Adulto Joven 99.5FM – Marzo 2016 (<a>@lacupula995</a>)</div>
+					<p>Emisora local de música contemporánea.</p>
+					<ul>
+						<li><strong>Productora:</strong>Guionista de El Set con María Fernanda Orta, programa musical de La Mega, Puerto La Cruz. Lunes a viernes de 8:30 a 10:00pm durante dos años. Redacción de noticias, festivales, lanzamientos, tops y reseñas.</li>
+					</ul>
+					<h2 className="titulo" id="skills">SKILLS</h2>
+					<div className="subseccion">Español: Nativo.</div>
+					<div className="subseccion">Inglés: Avanzado.</div>
+					<p>Escuela Básica bilingüe Vicente Campo Elías (2001 – 2009).</p>
+					<div className="subseccion">Portugués: Básico.</div>
+					<p> Tutoría privada en Macaé y Río de Janeiro, Brasil.</p>
+					<div className="subseccion">Eficiente:</div>
+					<p> Word, Power Point, Excel, Photoshop, Adobe Audition, WordPress, Slack, Trello.</p>
+					<div className="subseccion">Principiante:</div>
+					<p>Sony Vegas, Adobe Illustrator.</p>
+					<div className="subseccion">Otros skills:</div>
+					<p><strong>Escritura literaria</strong> (novelas, poesía y cuentos)</p>
+					<p><strong>Fotografia</strong>(artística y publicitaria)</p>
+
+
+
+			</div>
 			</div>
 		</div>
 	)

@@ -1,6 +1,5 @@
 import React from 'react'
 import Api from '../../Api/api.js'
-import {connect} from 'react-redux'
 
 
 function Articulos (props) {
@@ -25,22 +24,28 @@ function Articulos (props) {
                       })
                       break;
                     case 2:
-                      return (<iframe width="854" height="480" src={`https://www.youtube.com/embed/${fragmento}`} frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>)
+                      return (<iframe width="854" className="video" height="480" src={`https://www.youtube.com/embed/${fragmento}`} frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>)
                       break;
                   }
 
                 case 'poemario':
-                  case 0:
-                    return (<div key={fragmento} className="poema">{fragmento}</div>)
-                  case 1:
-                    return (<div key={fragmento} className="verso">{fragmento}</div>)
-                  break;
+                  switch(index) {
+                    case 0:
+                    return (<div key={fragmento} className="seccion poemario">{fragmento}</div>)
+                    break;
+                    case 1:
+                    return (<div key={fragmento} className="texto">{fragmento}</div>)
+                    break;
+                    default:
+                    break;
+                  }
                 default: {
                   switch (index) {
                     case 0:
                       return (<div key={fragmento} className="seccion">{fragmento}</div>)
                       break;
                     case 1:
+                      if (fragmento.video) return (<iframe width="854" className="video" height="480" src={`https://www.youtube.com/embed/${fragmento.video}`} frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>)
                       return (<div key={fragmento} id={fragmento} className="imagenArticulo"/>)
                       break;
                     case 2:
@@ -66,11 +71,4 @@ function Articulos (props) {
   )
 }
 
-function mapStateToProps (state,props) {
-  let id = Number(props.match.params.id)
-  return {
-    articulo: state.articulos[id]
-  }
-}
-
-export default connect(mapStateToProps)(Articulos)
+export default Articulos
