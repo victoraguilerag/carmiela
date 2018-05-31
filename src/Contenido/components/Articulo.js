@@ -1,6 +1,4 @@
 import React from 'react'
-import Api from '../../Api/api.js'
-
 
 function Articulos (props) {
   return (
@@ -17,49 +15,43 @@ function Articulos (props) {
                   switch(index) {
                     case 0:
                       return (<div key={fragmento} className="seccion">{fragmento}</div>)
-                      break;
                     case 1:
                       return fragmento.map(function(parrafo){
                         return (<p key={parrafo} className="texto">{parrafo}</p>)
                       })
-                      break;
                     case 2:
-                      return (<iframe width="854" className="video" height="480" src={`https://www.youtube.com/embed/${fragmento}`} frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>)
-                      break;
+                      return (<iframe title={fragmento} width="854" key={fragmento} className="video" height="480" src={`https://www.youtube.com/embed/${fragmento}`} frameBorder="0" allow="autoplay; encrypted-media" allowFullScreen></iframe>)
+                    default:
+                      return null
                   }
-
                 case 'poemario':
                   switch(index) {
                     case 0:
                     return (<div key={fragmento} className="seccion poemario">{fragmento}</div>)
-                    break;
                     case 1:
                     return (<div key={fragmento} className="texto">{fragmento}</div>)
-                    break;
                     default:
                     break;
                   }
+                  break
                 default: {
                   switch (index) {
                     case 0:
                       return (<div key={fragmento} className="seccion">{fragmento}</div>)
-                      break;
                     case 1:
-                      if (fragmento.video) return (<iframe width="854" className="video" height="480" src={`https://www.youtube.com/embed/${fragmento.video}`} frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>)
+                      if (fragmento.video) return (<iframe title={fragmento} key={fragmento} width="854" className="video" height="480" src={`https://www.youtube.com/embed/${fragmento.video}`} frameBorder="0" allow="autoplay; encrypted-media" allowFullScreen></iframe>)
                       return (<div key={fragmento} id={fragmento} className="imagenArticulo"/>)
-                      break;
                     case 2:
                       return fragmento.map(function(parrafo){
                         return (<p key={parrafo} className="texto">{parrafo}</p>)
                       })
-                      break;
                     default:
                       return null
                   }
                 }
 
               }
-
+              return null
             })
           })
         }
