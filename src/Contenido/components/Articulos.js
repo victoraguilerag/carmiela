@@ -1,5 +1,4 @@
 import React from 'react'
-import Articulo from '../../Previa/Previa.js'
 import { connect } from 'react-redux'
 import Previa from '../../Previa/Previa.js'
 

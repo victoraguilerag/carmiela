@@ -6,7 +6,8 @@ import registerServiceWorker from './registerServiceWorker';
 import { BrowserRouter as Router } from 'react-router-dom'
 import { createStore } from 'redux'
 import { Provider } from 'react-redux'
-import Api from './Api/api.js'
+import Api from './Api/newApi.js'
+import newApi from './Api/newApi.js'
 
 const store = createStore(
   reducerArticulos,

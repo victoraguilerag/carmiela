@@ -5,7 +5,7 @@ import Lector from './Lector/Lector.js'
 import Contacto from './Contacto/Contacto.js'
 import Experiencia from './Experiencia/Experiencia.js'
 import './App.css';
-import { Route, Redirect } from 'react-router-dom'
+import { Route } from 'react-router-dom'
 
 
 class App extends Component {

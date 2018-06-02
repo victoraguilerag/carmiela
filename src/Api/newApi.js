@@ -58,7 +58,7 @@ const api = {
           {
             tipo: 'imagen',
             fragmento: 'boda',
-          }
+          },
           {
             tipo: 'texto',
             fragmento: [
@@ -99,7 +99,7 @@ const api = {
               `Si quieres saber más ve este video producido por SK-II,
               una marca asiática que está haciendo una campaña para concientizar sobre el tema:`
             ]
-          }
+          },
           {
             tipo: 'video',
             fragmento: 'irfd74z52Cw'
@@ -435,10 +435,6 @@ const api = {
           {
             tipo: 'imagen',
             fragmento: 'floweboy-2'
-          },
-          {
-            tipo: 'texto',
-            fragmento:
           },
           {
             tipo: 'texto',

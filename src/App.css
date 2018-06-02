@@ -232,9 +232,10 @@ body{
 }
 
 .Articulo .seccion {
-  margin-top: 50px;
+  margin-top: 25px;
   margin-left: 5% !important;
   font-size: 21px !important;
+  margin-bottom: 25px;
 }
 
 .Articulo .seccion.poemario {
@@ -256,7 +257,7 @@ body{
   margin-bottom: 25px;
 }
 
-.Articulo .texto.poemario {
+.Articulo .verso {
   line-height: 3;
   width: 56%;
 }
@@ -614,7 +615,7 @@ body{
   }
   .redes {
     position: fixed;
-    top: 25%;
+    top: 40%;
     width: 25%;
     margin: 0 3%;
     display: -ms-flexbox;
