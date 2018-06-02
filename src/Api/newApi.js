@@ -434,7 +434,11 @@ const api = {
           },
           {
             tipo: 'imagen',
+<<<<<<< HEAD
             fragmento: 'floweboy-2'
+=======
+            fragmento: 'flowerboy-2'
+>>>>>>> 49f2d7e17a1e83473b815e948844a581cd78265d
           },
           {
             tipo: 'texto',
@@ -902,7 +906,7 @@ const api = {
           {
             tipo: 'imagen',
             fragmento: 'benito-2'
-          }
+          },
         ]
       },
     ]
