@@ -28,6 +28,12 @@ body{
   letter-spacing: 2px;
   margin-bottom: 0;
 }
+.perfil{
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  box-shadow: 0 0 2px rgba(0,0,0,1);
+}
 
 .header .subtitulo {
   font-family: 'Source Sans Pro';
@@ -586,6 +592,7 @@ body{
     position: absolute;
     background: white;
     bottom: 78px;
+    box-shadow: 0px 2px 6px rgba(0,0,0,.1);
   }
   .video {
     /* height: 50vh !important; */
@@ -640,28 +647,32 @@ body{
     flex-flow: row wrap;
     justify-content: center;
     align-items: center;
-    width: 60%;
-    margin: 0 auto;
+    width: 100%;
     font-size: 1.8em;
+  }
+  .simbolos a, .informacion a {
+    text-decoration: none;
   }
   .simbolos i {
     margin: 0 6px;
     cursor: pointer;
   }
-  .redes .simbolos {
+  .redes .simbolos a {
     color: rgb(225, 18, 42);
   }
-  .redes .simbolos i:hover {
+  .redes .simbolos a:hover {
     color: rgb(170, 170, 170);
   }
 
   .footer .simbolos {
     display: flex;
-    color: rgba(250,250,250,.5);
     position: absolute;
     right: 0;
   }
-  .footer .simbolos i:hover {
+  .footer .simbolos a {
+    color: rgba(250,250,250,.5);
+  }
+  .footer .simbolos a:hover {
     color: white;
   }
   .imagen {

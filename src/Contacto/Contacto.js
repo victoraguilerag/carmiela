@@ -13,13 +13,13 @@ function Contacto () {
           <p>E-mail: cdanielaveliz@gmail.com</p>
           <p>Teléfono: +58 4249243017</p>
           <p>O envíame un mensaje a través de mis redes:</p>
-          <a>
+					<a href="https://www.twitter.com/Carmiela_" target="blank">
             <p>Twitter</p>
           </a>
-          <a>
+					<a href="https://www.instagram.com/carmiela_" target="blank">
             <p>Instagram</p>
           </a>
-          <a>
+					<a href="https://www.facebook.com/profile.php?id=1323308137" target="blank">
             <p>Facebook</p>
           </a>
         </div>
