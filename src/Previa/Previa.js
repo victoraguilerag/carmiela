@@ -5,7 +5,7 @@ function Previa (props) {
 	return (
 		<div className="Previa">
 			<div src="imagen" id={props.portada} className="imagenPrevia"></div>
-			<div class="data-text">
+			<div className="data-text">
 			<h2 className="titulo">
 					<Link to={`/articulo/${props.id}`}>{props.titulo}</Link>
 			</h2>
