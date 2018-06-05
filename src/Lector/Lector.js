@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 import Aside from '../Contenido/components/Aside.js'
-import Articulo from '../Contenido/components/Articulo.js'
+import Articulo from '../Contenido/components/NewArticulo.js'
 import { connect } from 'react-redux'
 
 class Lector extends Component {
