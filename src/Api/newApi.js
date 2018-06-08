@@ -905,7 +905,81 @@ const api = {
           },
         ]
       },
+    ],
+    experiencia: {
+      educacion: [
+        {
+          tipo: 'subseccion',
+          fragmento: 'Fundación Universidad de Oriente.'
+        },
+        {
+          tipo: 'contenido',
+          fragmento: [
+            `Community Management - Diplomado`,
+            `Octubre 2016 - Marzo 2017`
+          ]
+        },
+        {
+          tipo: 'subseccion',
+          fragmento: 'Universidad Santa María. Núcleo Oriente.'
+        },
+        {
+          tipo: 'contenido',
+          fragmento: [
+            `Licenciatura en Comunicación Social   –  Mención impreso`,
+            `Septiembre 2017`
+          ]
+        },
+        {
+          tipo: 'subseccion',
+          fragmento: 'Unidad Educativa “Padre Claret”. Maturín,  Monagas.'
+        },
+        {
+          tipo: 'contenido',
+          fragmento: [
+            `Bachiller en Ciencias`,
+            `Octubre 2008 – Julio 2012`
+          ]
+        },
+    ],
+    profesional: [
+      {
+        nombre: 'KÖM Agency',
+        link: [
+          {
+            nombre: 'Knowmore',
+            url: 'https://www.instagram.com/knowmoreespanol/',
+          },
+          {
+            nombre: 'El Subterráneo',
+            url: 'https://www.instagram.com/elsubte/',
+          }
+        ],
+        periodo: 'Marzo 2018',
+        social: {
+          nombre: '@komagency',
+          url: 'https://www.instagram.com/komagency/'
+        },
+        descripcion: 'Agencia especializada en gestión de redes sociales y producción de contenido digital localizada en Lechería, Anzoátegui. Excelente reputación en la zona, en expansión hacia Colombia y Estados Unidos.',
+        posiciones: [
+          {
+            cargo: 'Guionista:',
+            resumen: 'Creación de hasta 20 guiones por semana para la marca <a href="" target="_blank" rel="noopener noreferrer">Facebook</a> e Instagram. Redacción de contenido literario, elección de clips y música para el material audiovisual. Guiones traducidos al inglés y portugués.',
+            descripcion: [
+              `Específicamente en categorías como religión, civilizaciones, cuerpo y fitness, sexo, estilo, nutrición, mente, amor, familia, quotes (piezas sobre poemas y extractos literarios), análisis (estudio de temas culturales), íconos (perfiles de personalidades de la pintura, música, moda, entre otros) y Storytelling.`,
+              `Parte del equipo que creó la personalidad de la marca y el manual de estilo aplicando estrategias de branding y benchmarking, enfocados en superar nuestra competencia para entonces: @CulturaColectiva, @Playground.`,
+              `Se trabajó a través de plataformas web (Slack, Google Drive, Trello) en tres países distintos: Lechería, Venezuela (Producción), Miami, Estados Unidos (Edición) y Quito, Ecuador (Postproducción).`,
+            ]
+          },
+          {
+            cargo: 'Copywriter:',
+            resumen: 'Redacción de reportajes, noticias, crónicas, storytelling y artículos para la página elsubte-rráneo.com sobre cultura, sexo, sociedad, drogas, turismo, feminismo y estilos de vida.',
+            descripcion: []
+          },
+        ]
+      },
     ]
+  }
 }
 
 export default api

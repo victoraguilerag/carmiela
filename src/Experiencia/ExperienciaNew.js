@@ -1,7 +1,10 @@
 import React from 'react'
+import { connect } from 'react-redux'
 import perfil from '../Assets/daniela.jpg'
 
-function Experiencia () {
+function Experiencia (props) {
+	const { educacion, profesional } = props.experiencia
+	console.log(educacion);
 	return (
 		<div className="">
 			<div id="experiencia" className="bExperiencia">
@@ -13,17 +16,64 @@ function Experiencia () {
 					<img src={perfil} width="50px" height="50px" alt="perfil" className="perfil"/>
 					<h2 className="titulo">EXPERIENCIA</h2>
 					<div className="seccion">EDUCACION</div>
-					<div className="subseccion">Fundación Universidad de Oriente.</div>
-					<p>Community Management - Diplomado</p>
-					<p>Octubre 2016 - Marzo 2017</p>
-					<div className="subseccion">Universidad Santa María. Núcleo Oriente.</div>
-					<p>Licenciatura en Comunicación Social   –  Mención impreso</p>
-					<p>Septiembre 2017</p>
-					<div className="subseccion">Unidad Educativa “Padre Claret”. Maturín,  Monagas.</div>
-					<p>Bachiller en Ciencias</p>
-					<p>Octubre 2008 – Julio 2012</p>
+					{
+						educacion.map((seccion)=>{
+							switch (seccion.tipo) {
+								case 'subseccion':
+									return <div className="subseccion">{seccion.fragmento}</div>
+									break;
+								case 'contenido':
+									return seccion.fragmento.map((titulo)=>{
+										return <p>{ titulo }</p>
+									})
+								default:
+									return null
+							}
+						})
+					}
 					<div className="seccion">RESUMEN PROFESIONAL</div>
-					<div className="subseccion">KÖM Agency / <a href="https://www.instagram.com/knowmoreespanol/" target="_blank" rel="noopener noreferrer">Knowmore</a> / <a href="https://www.instagram.com/elsubte/" target="_blank" rel="noopener noreferrer">El Subterráneo</a> – Marzo 2018 (<a href="https://www.instagram.com/komagency/" target="_blank" rel="noopener noreferrer">@komagency</a>)</div>
+					{
+						profesional.map((trabajo) => {
+							return (
+								<div>
+									<div className="subseccion">
+										{trabajo.nombre} /
+										{trabajo.link.map((link)=>{
+											return (
+												<span>
+													<a href={link.url} target="_blank" rel="noopener noreferrer"> {link.nombre}</a> /
+												</span>
+											)
+										})}
+										- { trabajo.periodo } (<a href={trabajo.social.url} target="_blank" rel="noopener noreferrer">{trabajo.social.nombre}</a>)
+									</div>
+									<p>{trabajo.descripcion}</p>
+									{
+										trabajo.posiciones.map((posicion)=>{
+											return (
+												<span>
+													<ul>
+														<li>
+															<strong>{posicion.cargo} </strong>
+															{posicion.resumen}
+														</li>
+													</ul>
+													{
+														posicion.descripcion.map((contenido)=>{
+															return (
+																<p> {contenido}</p>
+															)
+														})
+													}
+												</span>
+											)
+										})
+									}
+								</div>
+							)
+
+						})
+					}
 					<p>Agencia especializada en gestión de redes sociales y producción de contenido digital localizada en Lechería, Anzoátegui. Excelente reputación en la zona, en expansión hacia Colombia y Estados Unidos.</p>
 					<ul>
 						<li><strong>Guionista:</strong> Creación de hasta 20 guiones por semana para la marca <strong>Knowmore</strong> en Español en <a href="" target="_blank" rel="noopener noreferrer">Facebook</a> e <a href="https://www.facebook.com/KnowMoreEspanol/" target="_blank" rel="noopener noreferrer">Instagram</a>. Redacción de contenido literario, elección de clips y música para el material audiovisual. Guiones traducidos al inglés y portugués.</li>
@@ -76,7 +126,7 @@ function Experiencia () {
 					<p><strong>Escritura literaria</strong> (novelas, poesía y cuentos)</p>
 					<p><strong>Fotografia</strong>(artística y publicitaria)</p>
 					<a href="#exp" className="up">
-						<i class="fas fa-arrow-up"></i>
+						<i className="fas fa-arrow-up"></i>
 					</a>
 			</div>
 			</div>
@@ -84,4 +134,10 @@ function Experiencia () {
 	)
 }
 
-export default Experiencia
+function mapStateToProps(state, props) {
+	return {
+		experiencia: state.experiencia
+	}
+}
+
+export  default connect(mapStateToProps)(Experiencia)
