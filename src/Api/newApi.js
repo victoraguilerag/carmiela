@@ -964,20 +964,230 @@ const api = {
         posiciones: [
           {
             cargo: 'Guionista:',
-            resumen: 'Creación de hasta 20 guiones por semana para la marca <a href="" target="_blank" rel="noopener noreferrer">Facebook</a> e Instagram. Redacción de contenido literario, elección de clips y música para el material audiovisual. Guiones traducidos al inglés y portugués.',
+            resumen: [
+
+              {
+                tipo: 'texto',
+                fragmento:'Creación de hasta 20 guiones por semana para la marca Knowmore en Español en ', 
+              },
+              {
+                tipo: 'link',
+                nombre: 'Facebook',
+                url: 'https://www.facebook.com/KnowMoreTV/'
+              },
+              {
+                tipo: 'texto',
+                fragmento: ' e ',
+              },
+              {
+                tipo: 'link',
+                nombre: 'Instagram',
+                url: 'https://www.instagram.com/knowmoreespanol/',
+              },
+              {
+                tipo: 'texto',
+                fragmento: '. Redacción de contenido literario, elección de clips y música para el material audiovisual. Guiones traducidos al inglés y portugués.', 
+              }
+                          
+            ],
             descripcion: [
-              `Específicamente en categorías como religión, civilizaciones, cuerpo y fitness, sexo, estilo, nutrición, mente, amor, familia, quotes (piezas sobre poemas y extractos literarios), análisis (estudio de temas culturales), íconos (perfiles de personalidades de la pintura, música, moda, entre otros) y Storytelling.`,
-              `Parte del equipo que creó la personalidad de la marca y el manual de estilo aplicando estrategias de branding y benchmarking, enfocados en superar nuestra competencia para entonces: @CulturaColectiva, @Playground.`,
-              `Se trabajó a través de plataformas web (Slack, Google Drive, Trello) en tres países distintos: Lechería, Venezuela (Producción), Miami, Estados Unidos (Edición) y Quito, Ecuador (Postproducción).`,
+              {
+                tipo: 'texto',
+                fragmento: 'Marca dirigida principalmente a México, Colombia, Brasil, Argentina y latinos en Estados Unidos. Haciendo contenido de cultura y lifestyle.'
+              },
+              {
+                tipo: 'texto',
+                fragmento: `Específicamente en categorías como religión, civilizaciones, cuerpo y fitness, sexo, estilo, nutrición, mente, amor, familia, quotes (piezas sobre poemas y extractos literarios), análisis (estudio de temas culturales), íconos (perfiles de personalidades de la pintura, música, moda, entre otros) y Storytelling.`,
+              },
+              {
+                tipo: 'texto',
+                fragmento: `Parte del equipo que creó la personalidad de la marca y el manual de estilo aplicando estrategias de branding y benchmarking, enfocados en superar nuestra competencia para entonces: @CulturaColectiva, @Playground.`,
+              },
+              {
+                tipo: 'texto',
+                fragmento: `Se trabajó a través de plataformas web (Slack, Google Drive, Trello) en tres países distintos: Lechería, Venezuela (Producción), Miami, Estados Unidos (Edición) y Quito, Ecuador (Postproducción).`,
+              }
             ]
           },
           {
             cargo: 'Copywriter:',
-            resumen: 'Redacción de reportajes, noticias, crónicas, storytelling y artículos para la página elsubte-rráneo.com sobre cultura, sexo, sociedad, drogas, turismo, feminismo y estilos de vida.',
+            resumen: [
+              {
+                tipo: 'texto',
+                fragmento: 'Redacción de reportajes, noticias, crónicas, storytelling y artículos para la página ',
+              },
+              {
+                tipo: 'link',
+                nombre: 'elsubte-rráneo.com',
+                url: '',
+              },
+              {
+                tipo: 'texto',
+                fragmento: ' sobre cultura, sexo, sociedad, drogas, turismo, feminismo y estilos de vida.',
+              }
+            ],
             descripcion: []
           },
         ]
       },
+      {
+        nombre: 'Revista Oráculo ',
+        link: [],
+        periodo: 'Marzo 2017',
+        social: {
+          nombre: '@oraculomagazine',
+          url: 'https://www.instagram.com/oraculomagazine/'
+        },
+        descripcion: 'Proyecto editorial con entrevistas, crónicas, artículos de entretenimiento y opinión principalmente sobre política, poder, sexo, drogas, música, arte y religión. Primera edición estrenada en Barcelona, estado Anzoátegui, con alcance nacional a través de su exposición web.',
+        posiciones: [
+          {
+            cargo: 'Editora en jefe:',
+            resumen: [
+              {
+                tipo: 'texto',
+                fragmento: 'Producción de ideas e investigaciones para el material escrito. Creación de la línea editorial.',
+              },
+            ],
+          },
+          {
+            cargo: 'Redactora:',
+            resumen: [
+              {
+                tipo: 'texto',
+                fragmento: 'Producción de piezas sobre religión y sexualidad.',
+              },
+            ],
+          }
+
+        ]
+      },
+      {
+        nombre: 'Culturizando / Cápsula Cinéfila',
+        link: [],
+        periodo: 'Enero 2017',
+        social: {
+          nombre: '@capsulacinefila',
+          url: 'https://www.instagram.com/capsulacinefila/',
+        },
+        descripcion: 'Multiplataforma web que abarca Cultura General, Ambiente, Gramática y Ortografía, Actualidad, Curiosidades, Vida, Cine, Sexualidad, Entretenimiento, Historia, Tecnología, Ciencia, Arte y lo más destacado del acontecer internacional.',
+        posiciones: [
+          {
+            cargo: 'Copywriter',
+            resumen: [
+              {
+                tipo: 'texto',
+                fragmento: 'Redacción de noticias, reseñas, especiales y tops dedicados al cine para Cápsula Cinéfila, blog de '
+              },
+              {
+                tipo: 'link',
+                nombre: 'culturizando.com',
+                url: 'http://culturizando.com/',
+              },
+              {
+                tipo: 'texto',
+                fragmento: ' , producción de posts sobre el material para Instagram, Twitter y Facebook.',
+              },
+            ],
+          },
+        ],
+      },
+      {
+        nombre: 'Entre Largos y Cortos de Oriente',
+        link: [],
+        periodo: 'Septiembre 2016',
+        social: {
+          nombre: '@festivalcinelco',
+          url: 'https://www.instagram.com/festivalcinelco/'
+        },
+        descripcion: 'Festival de cine oriental que expone y premia obras cinematográficas en Anzoátegui, Monagas, Nueva Esparta y Sucre. Ofrece talleres y exposiciones públicas para comunidades de bajos recursos incentivando la cultura de cine nacional.',
+        posiciones: [
+          {
+            cargo: 'Organizadora / Equipo Creativo:',
+            resumen: [
+              {
+                tipo: 'texto',
+                fragmento: 'Preparación y promoción de la ceremonia de clausura del Festival, un evento con presentaciones musicales, números de teatro y pintura en vivo en el Centro Comercial Plaza Mayor. Parte del equipo de protocolo y calidad durante las proyecciones gratuitas.',
+              }
+            ],
+          }
+        ],
+      },
+      {
+        nombre: 'Adulto Joven 99.5FM',
+        link: [],
+        periodo: 'Marzo 2016',
+        social: {
+          nombre: '@lacupula995',
+          url: 'https://www.instagram.com/lacupula995/',
+        },
+        descripcion: 'Emisora local de música contemporánea.',
+        posiciones: [
+          {
+            cargo: 'Productora / Conductora Secundaria:',
+            resumen: [
+              {
+                tipo: 'texto',
+                fragmento: 'Creación de guiones originales para La Cúpula, un programa de música alternativa y actualidad pop. Comentarios dentro del espacio radial con buena respuesta del público en redes sociales.',
+              }
+            ]
+          }
+        ],
+      },
+      {
+        nombre: 'La Mega 100.9FM',
+        link: [],
+        periodo: 'Enero 2015',
+        social: {
+          nombre: '@lamega1009',
+          url: 'https://www.instagram.com/lamega1009/'
+        },
+        descripcion: 'Emisora del circuito nacional Unión Radio.',
+        posiciones: [
+          {
+            cargo: 'Productora:',
+            resumen: [
+              {
+                tipo: 'texto',
+                fragmento: 'Guionista de El Set con María Fernanda Orta, programa musical de La Mega, Puerto La Cruz. Lunes a viernes de 8:30 a 10:00pm durante dos años. Redacción de noticias, festivales, lanzamientos, tops y reseñas.',
+              }
+            ],
+          }
+        ],
+      }
+    ],
+    skills: [
+      {
+        seccion: 'Español: Nativo.',
+      },
+      {
+        seccion: 'Inglés: Avanzado.',
+        descripcion: 'Escuela Básica bilingüe Vicente Campo Elías (2001 – 2009).'
+      },
+      {
+        seccion: 'Portugués: Básico.',
+        descripcion: 'Tutoría privada en Macaé y Río de Janeiro, Brasil.',
+      },
+      {
+        seccion: 'Eficiente:',
+        descripcion: 'Word, Power Point, Excel, Photoshop, Adobe Audition, WordPress, Slack, Trello.',
+      },
+      {
+        seccion: 'Principiante:',
+        descripcion: 'Sony Vegas, Adobe Illustrator.',
+      },
+      {
+        seccion: 'Otros skills:',
+      },
+      {
+        seccion: '',
+        encabezado: 'Escritura literaria',
+        descripcion: ' (novelas, poesía y cuentos)',
+      },
+      {
+        seccion: '',
+        encabezado: 'Fotografia',
+        descripcion: '(artística y publicitaria)'
+      }
     ]
   }
 }
