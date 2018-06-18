@@ -4,29 +4,48 @@ import './index.css';
 import App from './App';
 import registerServiceWorker from './registerServiceWorker';
 import { BrowserRouter as Router } from 'react-router-dom'
-import { createStore } from 'redux'
-import { Provider } from 'react-redux'
-import Api from './Api/newApi.js'
+import ApolloClient from "apollo-boost";
+import gql from "graphql-tag";
+import { ApolloProvider } from "react-apollo"
 
-const store = createStore(
-  reducerArticulos,
-  Api,
-  window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__()
-)
+const client = new ApolloClient({
+  uri: "http://localhost:3001/graphql"
+});
 
-function reducerArticulos (state = Api ,action) {
-  switch (action.type) {
-    default:
-      return state
-  }
-}
+client.query({
+  query: gql`
+    {
+      articulos{
+        titulo
+        previa
+      }
+    }
+  `
+}).then(result => console.log(result))
+
+// fetch('http://localhost:3001/graphql?query={articulos{ titulo previa}}')
+//   .then(res =>res.json())
+//   .then(res => console.log(res))
+
+// const store = createStore(
+//   reducerArticulos,
+//   Api,
+//   window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__()
+// )
+//
+// function reducerArticulos (state = Api ,action) {
+//   switch (action.type) {
+//     default:
+//       return state
+//   }
+// }
 
 
 ReactDOM.render(
-  <Provider store={store}>
+  <ApolloProvider client={client}>
     <Router>
       <App />
     </Router>
-  </Provider>
+  </ApolloProvider>
   , document.getElementById('root'));
 registerServiceWorker();
