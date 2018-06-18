@@ -15,7 +15,7 @@ const client = new ApolloClient({
 client.query({
   query: gql`
     {
-      articulos{
+      articulo (id: 1){
         titulo
         previa
       }

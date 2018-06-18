@@ -3,20 +3,22 @@ import Previa from '../../Previa/Previa.js'
 import { Query } from 'react-apollo'
 import gql from 'graphql-tag'
 
+const GET_ARTICULOS = gql`
+  {
+    articulos {
+      id
+      previa
+      titulo
+      portada
+    }
+  }
+`;
+
 function Articulos (props) {
   return (
     <div className="Articulos">
       <Query
-        query={gql`
-          {
-            articulos {
-              id
-              previa
-              titulo
-              portada
-            }
-          }
-        `}
+        query={GET_ARTICULOS}
       >
       {({ loading, error, data }) => {
         if (loading) return <p> Loading... </p>

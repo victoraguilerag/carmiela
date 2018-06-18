@@ -1,24 +1,45 @@
 import React, { Component } from 'react'
 import Articulo from '../Contenido/components/NewArticulo.js'
 import Aside from '../Contenido/components/Aside.js'
-import { connect } from 'react-redux'
+import { Query } from 'react-apollo'
+import gql from 'graphql-tag'
 
 class Lector extends Component {
-  render () {
+  render (props) {
+    const id = this.props.match.params.id
     return (
-      <div className="Contenido" >
-  			<Articulo articulo={this.props.articulo} />
-  			<Aside />
-  		</div>
+      <Query
+      query={gql`
+        {
+          articulo (id: ${id}) {
+            id
+            previa
+            titulo
+            portada
+            cuerpo{
+              tipo
+              fragmento{
+                valor
+              }
+            }
+          }
+        }
+        `}
+      >
+        {({loading, error, data}) => {
+          if (loading) return <p> Loading... </p>
+          if (error) return <p> Error... </p>
+
+          return (
+            <div className="Contenido" >
+              <Articulo articulo={data.articulo} />
+              <Aside />
+            </div>
+          )
+        }}
+      </Query>
     )
   }
 }
 
-function mapStateToProps (state,props) {
-  let id = Number(props.match.params.id)
-  return {
-    articulo: state.articulos[id]
-  }
-}
-
-export default connect(mapStateToProps)(Lector)
+export default Lector
