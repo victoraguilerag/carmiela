@@ -1,7 +1,6 @@
 import React from 'react'
 
 function Articulos (props) {
-  console.log(props.articulo);
   return (
     <div className="Articulos">
       <div className="Articulo">
@@ -26,7 +25,7 @@ function Articulos (props) {
                 })
               case 'video':
                 return fragmento.map(function(pieza){
-                  return <iframe key={pieza.valor} width="854" title={pieza.valor} className="video" height="480" src={`https://www.youtube.com/embed/${pieza.valor}`} frameBorder="0" allow="autoplay; encrypted-media" allowFullScreen></iframe>
+                  return <iframe key={pieza.valor} width="854" title={pieza.valor} className="video" height="480" src={`https://www.youtube.com/embed/${pieza.valor}`} frameBorder="0" allowFullScreen></iframe>
                 })
               case 'titulo poema':
                 return fragmento.map(function(pieza){

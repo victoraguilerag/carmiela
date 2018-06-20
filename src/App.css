@@ -20,6 +20,14 @@ body{
   flex-flow: column nowrap;
   justify-content: center;
   align-items: center;
+  position: relative;
+}
+.header .edit {
+  color: #f25f70;
+  cursor: pointer;
+  position: absolute;
+  right: 5px;
+  top: 5px;
 }
 .header .titulo {
   font-family: 'Oswald';
@@ -405,6 +413,13 @@ body{
   font-family: 'Source Sans Pro';
   color: rgba(50,50,50,.6);
   text-align: center;
+  cursor: pointer;
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
 }
 
 .experiencia .up {
@@ -436,6 +451,7 @@ body{
   background: rgba(40,40,40,1);
   font-family: 'Source Sans Pro';
   font-weight: bold;
+  position: relative;
 }
 
 .footer .simbolos {
@@ -617,7 +633,7 @@ body{
     margin-left: 40%;
     position: absolute;
     background: white;
-    bottom: 78px;
+    top: 35%;
     box-shadow: 0px 1px 2px rgba(0,0,0,.1);
   }
   .video {
@@ -629,7 +645,7 @@ body{
 }
 @media screen and (min-width: 800px) {
   .Layout {
-    width: 80%;
+    width: 90%;
     margin: 0 auto;
   }
   .Articulos {
@@ -649,6 +665,7 @@ body{
   .redes {
     position: fixed;
     top: 40%;
+    right: 25px;
     width: 25%;
     margin: 0 3%;
     display: -ms-flexbox;
@@ -694,6 +711,7 @@ body{
     display: flex;
     position: absolute;
     right: 0;
+    bottom: 10px;
     width: 40%;
     font-size: 1.3em;
   }

@@ -1,18 +1,39 @@
 import React from 'react'
+import { Query } from 'react-apollo'
+import gql from 'graphql-tag'
 
 function Simbolos () {
   return (
-      <div className="simbolos">
-        <a href="https://www.instagram.com/Carmiela_" target="blank">
-          <i className="fab fa-instagram"></i>
-        </a>
-        <a href="https://www.twitter.com/Carmiela_" target="blank">
-          <i className="fab fa-twitter"></i>
-        </a>
-        <a href="https://www.facebook.com/profile.php?id=1323308137" target="blank">
-          <i className="fab fa-facebook"></i>
-        </a>
-      </div>
+    <Query
+      query={gql`
+        {
+          personal{
+            redes{
+              nombre
+              url
+            }
+          }
+        }
+      `}
+    >
+    {({loading, error, data}) => {
+      if (loading) return <p> Loading... </p>
+      if (error) return <p> Error... </p>
+
+      const { redes } = data.personal[0]
+      return (
+        <div className="simbolos">
+          {
+            redes.map(red => (
+              <a key={red.nombre} href={red.url} target="blank">
+                <i className={`fab fa-${red.nombre.toLowerCase()}`}></i>
+              </a>
+            ))
+          }
+        </div>
+      )
+    }}
+    </Query>
   )
 }
 

@@ -21,7 +21,7 @@ client.query({
       }
     }
   `
-}).then(result => console.log(result))
+}).then(result => console.log('Bienvenido'))
 
 // fetch('http://localhost:3001/graphql?query={articulos{ titulo previa}}')
 //   .then(res =>res.json())
