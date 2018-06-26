@@ -21,7 +21,6 @@ function Header () {
 			const { nombre, apellido } = data.personal[0]
 			return (
 				<div className="header">
-					<i class="fas fa-pencil-alt edit"></i>
 					<h1 className="titulo">
 						{`${nombre.toUpperCase()} ${apellido.toUpperCase()}`}
 					</h1>

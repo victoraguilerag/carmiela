@@ -22,12 +22,12 @@ body{
   align-items: center;
   position: relative;
 }
-.header .edit {
+.edit {
   color: #f25f70;
   cursor: pointer;
   position: absolute;
-  right: 5px;
-  top: 5px;
+  right: 6px;
+  top: 7px;
 }
 .header .titulo {
   font-family: 'Oswald';
@@ -142,6 +142,7 @@ body{
 .Articulos {
   width: 100%;
   border-bottom: solid rgba(200,200,200,.3) 1px;
+  position: relative;
 }
 
 .Previa {

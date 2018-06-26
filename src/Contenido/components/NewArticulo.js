@@ -1,9 +1,13 @@
 import React from 'react'
+import { Link } from 'react-router-dom'
 
 function Articulos (props) {
   return (
     <div className="Articulos">
       <div className="Articulo">
+        <Link to={`/articulo/edit/${props.articulo.id}`} className="edit">
+          <i className="fas fa-pencil-alt edit"></i>
+        </Link>
         <div id={props.articulo.portada} className="imagen"></div>
         <h2 className="titulo"><a>{props.articulo.titulo}</a></h2>
         {
