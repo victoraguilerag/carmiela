@@ -139,10 +139,105 @@ body{
   min-height: 60vh;
 }
 
+.herramientas {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  width: 100%;
+  background: rgba(150,150,150,.1);
+  height: 50px;
+  position: absolute;
+}
+.herramienta {
+  width: 100px;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.herramienta:hover{
+  transition: 1s;
+  background: rgba(150,150,150,.3);
+}
 .Articulos {
   width: 100%;
+  min-height: 80vh;
   border-bottom: solid rgba(200,200,200,.3) 1px;
   position: relative;
+}
+
+{
+  display: flex;
+  flex-flow: column wrap;
+  justify-content: center;
+  align-items: flex-start;
+}
+
+.parrafo {
+  width: 80%;
+  padding: 0 10%;
+  display: flex;
+  flex-flow: column wrap;
+  justify-content: center;
+  align-items: flex-start;
+  margin:  20px 0;
+}
+
+.parrafo textarea {
+  width: 100%;
+  color: rgb(10, 10, 10);
+  font-family: "Source Sans Pro";
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 300;
+  margin: 0 auto;
+  resize: none;
+  transition: 1s all ease;
+  will-change: border;
+}
+
+.parrafo textarea:focus {
+  border: solid thin #f25f70;
+  transition: 1s all ease;
+  outline: 0 none;
+  will-change: border;
+}
+
+.parrafo textarea.agregar-titulo {
+  font-family: 'Oswald';
+  font-weight: 300;
+  font-size: 1.5em;
+  letter-spacing: 2px;
+  color: rgba(0,0,0,.8);
+}
+
+.parrafo textarea.agregar-titulo:hover {
+  color: #e1122a;
+}
+
+.parrafo textarea.agregar-subtitulo {
+  font-family: 'Oswald';
+  font-weight: 300;
+  font-size: 21px !important;
+  color: rgba(30,30,30,.8);
+  letter-spacing: 2px;
+  font-weight: bold;
+  margin: 0 auto;
+}
+
+.parrafo input.agregar-video {
+  width: 80% !important;
+  margin: 0 auto;
+}
+
+.parrafo input.agregar-imagen {
+  width: 80%;
+  margin: 0 auto;
+}
+
+.parrafo input.agregar-fecha {
+  margin: 0 auto;
 }
 
 .Previa {
@@ -274,6 +369,41 @@ body{
   padding: 0 5%;
   line-height: 24px;
   margin-bottom: 25px;
+}
+.Articulo .texto.edit{
+  border: none;
+  width: 90%;
+  resize: none;
+  position: relative;
+}
+.Articulo .text.edit:focus{
+  border: lightblue solid thin;
+}
+
+.floatButton{
+  position: fixed;
+  color: white;
+  position: fixed;
+  top: 35%;
+  right: 5%;
+  border: none;
+  width: 120px;
+  height: 35px;
+  padding: 0 -4px;
+  background-color: #f25f70;
+  z-index: 200;
+  cursor: pointer;
+  border-radius: 2px;
+  font-weight: bold;
+  box-shadow: inset 0 -4px 0 0 rgba(50,50,50,.1);
+}
+.floatButton:focus{
+  border: none;
+  outline: none;
+}
+.floatButton:active {
+  border-radius: none;
+  background-color: #f13f70;
 }
 
 .Articulo .texto.poemario {
@@ -652,6 +782,9 @@ body{
   .Articulos {
     width: 70%;
     background-color: white;
+  }
+  .Articulos.agregar {
+    width: 100%;
   }
   .imagenArticulo {
     height: 40vh !important;

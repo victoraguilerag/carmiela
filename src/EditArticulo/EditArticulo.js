@@ -1,27 +1,60 @@
 import React, {Component} from 'react'
-import { Query } from 'react-apollo'
+import { Query, Mutation } from 'react-apollo'
+import { Redirect } from 'react-router'
 import gql from 'graphql-tag'
 
+// onKeyPress={ e => {
+//     e.preventDefault()
+//     console.log('strangers!');
+//     editFragmento({
+//       variables: {
+//         fragmentoId: pieza.id,
+//         fragmento: {
+//             valor: pieza.valor + e.key
+//         }
+//       }
+//     })
+//   }
+// }
+
+const EDIT_FRAGMENTO = gql`
+    mutation EditarFragmento($fragmentoId: Int!, $fragmento: FragmentoEditable!){
+      fragmentoEdit(fragmentoId: $fragmentoId, fragmento: $fragmento){
+        id
+        valor
+      }
+    }
+  `
+
 class EditArticulo extends Component {
-  render (props) {
-    return (
-      <Query
-        query={gql`
-          {
-            articulo(id: ${this.props.match.params.id}){
+  textAreaAdjust = e => {
+    if(e.key !== "Backspace"){
+      e.target.style.height = (e.target.scrollHeight - 2)+"px";
+    }
+  }
+
+  render (props, context) {
+    const GET_ARTICULO_INFO = gql`
+      {
+        articulo(id: ${this.props.match.params.id}){
+          id
+          previa
+          titulo
+          portada
+          cuerpo{
+            tipo
+            fragmento{
               id
-              previa
-              titulo
-              portada
-              cuerpo{
-                tipo
-                fragmento{
-                  valor
-                }
-              }
+              valor
             }
           }
-        `}
+        }
+      }
+    `
+
+    return (
+      <Query
+        query={GET_ARTICULO_INFO}
       >
         {
           ({loading, error, data}) => {
@@ -29,47 +62,92 @@ class EditArticulo extends Component {
             if (error) return <p>Error...</p>
 
             return (
-              <div className="Articulos">
-                <div className="Articulo">
-                  <div> Editando </div>
-                  <div id={data.articulo.portada} className="imagen"></div>
-                  <h2 contentEditable className="titulo"><a>{data.articulo.titulo}</a></h2>
-                  {
-
-                    data.articulo.cuerpo.map((seccion)=>{
-                      const { fragmento } = seccion
-                      switch (seccion.tipo) {
-                        case 'texto':
-                          return fragmento.map(function(pieza){
-                            return <p contentEditable key={pieza.id} className="texto">{pieza.valor}</p>
+              <Mutation
+                mutation={EDIT_FRAGMENTO}
+              >
+                {(editFragmento, { data: newData }) => (
+                  <div className="Articulos">
+                    <div className="Articulo">
+                      <div> Editando </div>
+                      <div id={data.articulo.portada} className="imagen"></div>
+                      <div className="parrafo">
+                        <label htmlFor="titulo">Titulo</label>
+                        <textarea onChange={this.updateElement} className="agregar-titulo" defaultValue={data.articulo.titulo}/>
+                      </div>
+                      <input type="submit" className="floatButton" value="Save Changes" onClick={() => {
+                        data.articulo.cuerpo.map((seccion, index) => {
+                            const { fragmento } = seccion
+                            console.log(fragmento);
+                            fragmento.map((pieza,index) => {
+                              console.log(pieza.id);
+                              let newData = document.getElementById(pieza.id)
+                              editFragmento({
+                                variables: {
+                                  fragmentoId: newData.id,
+                                  fragmento: {
+                                    valor: newData.value,
+                                  }
+                                }
+                              })
+                            })
                           })
-                        case 'titulo':
-                          return fragmento.map(function(pieza){
-                            return <div contentEditable key={pieza.id} className="seccion">{pieza.valor}</div>
-                          })
-                        case 'imagen':
-                          return fragmento.map(function(pieza){
-                            return <div key={pieza.id} id={pieza.valor} className="imagenArticulo"/>
-                          })
-                        case 'video':
-                          return fragmento.map(function(pieza){
-                            return <iframe key={pieza.id} width="854" title={pieza.valor} className="video" height="480" src={`https://www.youtube.com/embed/${pieza.valor}`} frameBorder="0" allowFullScreen></iframe>
-                          })
-                        case 'titulo poema':
-                          return fragmento.map(function(pieza){
-                            return <div contentEditable key={pieza.id} className="seccion poemario">{pieza.valor}</div>
-                          })
-                        case 'verso':
-                          return fragmento.map(function(pieza){
-                            return <div contentEditable key={pieza.id} className="texto poemario">{pieza.valor}</div>
-                          })
-                        default:
-                          return null
+                          this.props.history.push(`/articulo/${this.props.match.params.id}`)
+                        }}
+                      />
+                      {
+                        data.articulo.cuerpo.map((seccion)=>{
+                          const { fragmento } = seccion
+                          switch (seccion.tipo) {
+                            case 'texto':
+                            return fragmento.map(function(pieza, index){
+                              return <div key={index} className="parrafo">
+                                       <label htmlFor="parrafo">Parrafo</label>
+                                      <textarea
+                                        id={pieza.id}
+                                        style={{ minHeight: '150px'}}
+                                        defaultValue={pieza.valor}
+                                      />
+                                    </div>
+                            })
+                            case 'titulo':
+                            return fragmento.map(function(pieza){
+                              return <div className="parrafo">
+                                       <label htmlFor="subtitulo">Subtitulo</label>
+                                       <textarea id={pieza.id} name="subtitulo" className="agregar-subtitulo" defaultValue={pieza.valor} />
+                                     </div>
+                            })
+                            case 'imagen':
+                            return fragmento.map(function(pieza){
+                              return <div className="parrafo">
+                                <label htmlFor="imagen">Imagen</label>
+                                <input id={pieza.id} type="text" name="imagen" className="agregar-imagen" defaultValue={pieza.valor} />
+                              </div>
+                            })
+                            case 'video':
+                            return fragmento.map(function(pieza){
+                              return <div className="parrafo">
+                                <label htmlFor="video">Video</label>
+                                <input id={pieza.id} type="text" name="video" className="agregar-video" defaultValue={pieza.valor} />
+                              </div>
+                            })
+                            case 'titulo poema':
+                            return fragmento.map(function(pieza){
+                              return <div key={pieza.id} className="seccion poemario">{pieza.valor}</div>
+                            })
+                            case 'verso':
+                            return fragmento.map(function(pieza){
+                              return <div key={pieza.id} className="texto poemario">{pieza.valor}</div>
+                            })
+                            default:
+                            return null
+                          }
+                        })
                       }
-                    })
-                  }
-                </div>
-              </div>
+                    </div>
+                  </div>
+
+                )}
+              </Mutation>
             )
           }
         }

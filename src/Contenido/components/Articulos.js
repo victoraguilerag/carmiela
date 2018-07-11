@@ -1,5 +1,6 @@
 import React from 'react'
 import Previa from '../../Previa/Previa.js'
+import { NavLink as Link } from 'react-router-dom'
 import { Query } from 'react-apollo'
 import gql from 'graphql-tag'
 
@@ -17,6 +18,9 @@ const GET_ARTICULOS = gql`
 function Articulos (props) {
   return (
     <div className="Articulos">
+      <Link to="/nuevo/articulo" exact activeStyle={{ color: 'rgba(70,70,70,1)' }} >
+        <input type="submit" className="floatButton" value="Añadir Articulo"/>
+      </Link>
       <Query
         query={GET_ARTICULOS}
       >
