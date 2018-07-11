@@ -17,11 +17,11 @@ import gql from 'graphql-tag'
 //   }
 // }
 
-const EDIT_FRAGMENTO = gql`
-    mutation EditarFragmento($fragmentoId: Int!, $fragmento: FragmentoEditable!){
-      fragmentoEdit(fragmentoId: $fragmentoId, fragmento: $fragmento){
+const EDIT_ARTICULO = gql`
+    mutation EditarArticulo($articuloId: Int!, $articulo: ArticuloEditable, $fragmentos: [FragmentoEditable]){
+      articuloEdit(articuloId: $articuloId, articulo: $articulo, fragmentos:$fragmentos){
         id
-        valor
+        titulo
       }
     }
   `
@@ -63,33 +63,55 @@ class EditArticulo extends Component {
 
             return (
               <Mutation
-                mutation={EDIT_FRAGMENTO}
+                mutation={EDIT_ARTICULO}
               >
-                {(editFragmento, { data: newData }) => (
+                {(editArticulo, { data: newData }) => (
                   <div className="Articulos">
                     <div className="Articulo">
                       <div> Editando </div>
                       <div id={data.articulo.portada} className="imagen"></div>
                       <div className="parrafo">
                         <label htmlFor="titulo">Titulo</label>
-                        <textarea onChange={this.updateElement} className="agregar-titulo" defaultValue={data.articulo.titulo}/>
+                        <textarea onChange={this.updateElement} id="titulo" className="agregar-titulo" defaultValue={data.articulo.titulo}/>
                       </div>
-                      <input type="submit" className="floatButton" value="Save Changes" onClick={() => {
-                        data.articulo.cuerpo.map((seccion, index) => {
+                      <input type="submit" className="floatButton" value="Save Changes" onClick={async () => {
+                        // data.articulo.cuerpo.map((seccion, index) => {
+                        //     const { fragmento } = seccion
+                        //     console.log(fragmento);
+                        //     fragmento.map((pieza,index) => {
+                        //       console.log(pieza.id);
+                        //       let newData = document.getElementById(pieza.id)
+                        //       editFragmento({
+                        //         variables: {
+                        //           fragmentoId: newData.id,
+                        //           fragmento: {
+                        //             valor: newData.value,
+                        //           }
+                        //         }
+                        //       })
+                        //     })
+                        //   })
+                          const fragmentos = []
+                          data.articulo.cuerpo.map(seccion => {
                             const { fragmento } = seccion
-                            console.log(fragmento);
-                            fragmento.map((pieza,index) => {
-                              console.log(pieza.id);
-                              let newData = document.getElementById(pieza.id)
-                              editFragmento({
-                                variables: {
-                                  fragmentoId: newData.id,
-                                  fragmento: {
-                                    valor: newData.value,
-                                  }
-                                }
+                            fragmento.map(pieza => {
+                              const newData = document.getElementById(pieza.id)
+                              fragmentos.push({
+                                id: newData.id,
+                                valor: newData.value
                               })
                             })
+                          })
+                          console.log(fragmentos);
+                          const titulo = document.getElementById("titulo")
+                          await editArticulo({
+                            variables: {
+                              articuloId: data.articulo.id,
+                              articulo: {
+                                titulo: titulo.value,
+                              },
+                              fragmentos: fragmentos
+                            }
                           })
                           this.props.history.push(`/articulo/${this.props.match.params.id}`)
                         }}
@@ -101,7 +123,7 @@ class EditArticulo extends Component {
                             case 'texto':
                             return fragmento.map(function(pieza, index){
                               return <div key={index} className="parrafo">
-                                       <label htmlFor="parrafo">Parrafo</label>
+                                      <label htmlFor="parrafo">Parrafo</label>
                                       <textarea
                                         id={pieza.id}
                                         style={{ minHeight: '150px'}}
