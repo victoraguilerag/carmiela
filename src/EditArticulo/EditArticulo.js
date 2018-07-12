@@ -42,6 +42,7 @@ class EditArticulo extends Component {
           titulo
           portada
           cuerpo{
+            id
             tipo
             fragmento{
               id
@@ -112,8 +113,10 @@ class EditArticulo extends Component {
                               },
                               fragmentos: fragmentos
                             }
+                          }).then(() => {
+                            window.location.href = `/articulo/${this.props.match.params.id}`;
+                            // this.props.history.push(`/articulo/${this.props.match.params.id}`)
                           })
-                          this.props.history.push(`/articulo/${this.props.match.params.id}`)
                         }}
                       />
                       {
