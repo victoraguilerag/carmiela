@@ -1,24 +1,9 @@
 import React, {Component} from 'react'
 import { Query, Mutation } from 'react-apollo'
-import { Redirect } from 'react-router'
 import gql from 'graphql-tag'
 
-// onKeyPress={ e => {
-//     e.preventDefault()
-//     console.log('strangers!');
-//     editFragmento({
-//       variables: {
-//         fragmentoId: pieza.id,
-//         fragmento: {
-//             valor: pieza.valor + e.key
-//         }
-//       }
-//     })
-//   }
-// }
-
 const EDIT_ARTICULO = gql`
-    mutation EditarArticulo($articuloId: Int!, $articulo: ArticuloEditable, $fragmentos: [FragmentoEditable]){
+    mutation EditarArticulo($articuloId: Int!, $articulo: ArticuloEditable, $fragmentos: [CuerpoEditable]){
       articuloEdit(articuloId: $articuloId, articulo: $articulo, fragmentos:$fragmentos){
         id
         titulo
@@ -27,12 +12,6 @@ const EDIT_ARTICULO = gql`
   `
 
 class EditArticulo extends Component {
-  textAreaAdjust = e => {
-    if(e.key !== "Backspace"){
-      e.target.style.height = (e.target.scrollHeight - 2)+"px";
-    }
-  }
-
   render (props, context) {
     const GET_ARTICULO_INFO = gql`
       {
@@ -66,44 +45,34 @@ class EditArticulo extends Component {
               <Mutation
                 mutation={EDIT_ARTICULO}
               >
-                {(editArticulo, { data: newData }) => (
-                  <div className="Articulos">
+                {(editArticulo, { loading, error }) => (
+                  <div key="chumi bebe" className="Articulos">
                     <div className="Articulo">
-                      <div> Editando </div>
+                      { loading && <div> Loading </div>}
+                      { error && <div> Error </div>}
                       <div id={data.articulo.portada} className="imagen"></div>
                       <div className="parrafo">
                         <label htmlFor="titulo">Titulo</label>
                         <textarea onChange={this.updateElement} id="titulo" className="agregar-titulo" defaultValue={data.articulo.titulo}/>
                       </div>
                       <input type="submit" className="floatButton" value="Save Changes" onClick={async () => {
-                        // data.articulo.cuerpo.map((seccion, index) => {
-                        //     const { fragmento } = seccion
-                        //     console.log(fragmento);
-                        //     fragmento.map((pieza,index) => {
-                        //       console.log(pieza.id);
-                        //       let newData = document.getElementById(pieza.id)
-                        //       editFragmento({
-                        //         variables: {
-                        //           fragmentoId: newData.id,
-                        //           fragmento: {
-                        //             valor: newData.value,
-                        //           }
-                        //         }
-                        //       })
-                        //     })
-                        //   })
-                          const fragmentos = []
+                          const cuerpo = []
+                          let fragmentos = []
                           data.articulo.cuerpo.map(seccion => {
                             const { fragmento } = seccion
                             fragmento.map(pieza => {
                               const newData = document.getElementById(pieza.id)
-                              fragmentos.push({
+                              return fragmentos.push({
                                 id: newData.id,
                                 valor: newData.value
                               })
                             })
+                            cuerpo.push({
+                              id: seccion.id,
+                              fragmento: fragmentos
+                            })
+                            return fragmentos = []
                           })
-                          console.log(fragmentos);
                           const titulo = document.getElementById("titulo")
                           await editArticulo({
                             variables: {
@@ -111,7 +80,7 @@ class EditArticulo extends Component {
                               articulo: {
                                 titulo: titulo.value,
                               },
-                              fragmentos: fragmentos
+                              fragmentos: cuerpo
                             }
                           }).then(() => {
                             window.location.href = `/articulo/${this.props.match.params.id}`;
@@ -169,8 +138,8 @@ class EditArticulo extends Component {
                         })
                       }
                     </div>
-                  </div>
 
+                  </div>
                 )}
               </Mutation>
             )
