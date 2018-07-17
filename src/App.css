@@ -182,10 +182,25 @@ body{
   justify-content: center;
   align-items: flex-start;
   margin:  20px 0;
+  position: relative;
+}
+
+.parrafo .delete {
+  display: none;
+  position: absolute;
+  left: 20px;
+  top: 20px;
+  cursor: pointer;
+  color: red;
+}
+
+.parrafo:hover .delete {
+  display: block;
 }
 
 .parrafo textarea {
-  width: 100%;
+  width: 95%;
+  padding: 2.5% 2.5%;
   color: rgb(10, 10, 10);
   font-family: "Source Sans Pro";
   font-size: 16px;
@@ -195,13 +210,15 @@ body{
   resize: none;
   transition: 1s all ease;
   will-change: border;
+  border: none;
+  box-shadow: 0px 0px 2px 0 rgba(0, 0, 0, .3);
 }
 
 .parrafo textarea:focus {
-  border: solid thin #f25f70;
   transition: 1s all ease;
   outline: 0 none;
   will-change: border;
+  box-shadow: 0px 0px 2px 0 #f25f70;
 }
 
 .parrafo textarea.agregar-titulo {

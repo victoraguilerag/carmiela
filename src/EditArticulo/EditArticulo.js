@@ -3,8 +3,8 @@ import { Query, Mutation } from 'react-apollo'
 import gql from 'graphql-tag'
 
 const EDIT_ARTICULO = gql`
-    mutation EditarArticulo($articuloId: Int!, $articulo: ArticuloEditable, $fragmentos: [CuerpoEditable]){
-      articuloEdit(articuloId: $articuloId, articulo: $articulo, fragmentos:$fragmentos){
+    mutation EditarArticulo($articuloId: Int!, $articulo: ArticuloEditable){
+      articuloEdit(articuloId: $articuloId, articulo: $articulo){
         id
         titulo
       }
@@ -12,6 +12,17 @@ const EDIT_ARTICULO = gql`
   `
 
 class EditArticulo extends Component {
+  handleDeleteElement = (e,id) => {
+    console.log(e);
+    let component = document.getElementById(id)
+    console.log(id);
+    if (component) {
+      component.id = ''
+      component.parentNode.style.display = "none"
+      component.value = ''
+    }
+  }
+
   render (props, context) {
     const GET_ARTICULO_INFO = gql`
       {
@@ -23,10 +34,7 @@ class EditArticulo extends Component {
           cuerpo{
             id
             tipo
-            fragmento{
-              id
-              valor
-            }
+            valor
           }
         }
       }
@@ -49,7 +57,7 @@ class EditArticulo extends Component {
                   <div key="chumi bebe" className="Articulos">
                     <div className="Articulo">
                       { loading && <div> Loading </div>}
-                      { error && <div> Error </div>}
+                      { error && <div> Error `${error}` </div>}
                       <div id={data.articulo.portada} className="imagen"></div>
                       <div className="parrafo">
                         <label htmlFor="titulo">Titulo</label>
@@ -57,21 +65,15 @@ class EditArticulo extends Component {
                       </div>
                       <input type="submit" className="floatButton" value="Save Changes" onClick={async () => {
                           const cuerpo = []
-                          let fragmentos = []
                           data.articulo.cuerpo.map(seccion => {
-                            const { fragmento } = seccion
-                            fragmento.map(pieza => {
-                              const newData = document.getElementById(pieza.id)
-                              return fragmentos.push({
+                            const newData = document.getElementById(seccion.id)
+                            if (newData) {
+                              return cuerpo.push({
                                 id: newData.id,
+                                tipo: newData.tipo,
                                 valor: newData.value
                               })
-                            })
-                            cuerpo.push({
-                              id: seccion.id,
-                              fragmento: fragmentos
-                            })
-                            return fragmentos = []
+                            }
                           })
                           const titulo = document.getElementById("titulo")
                           await editArticulo({
@@ -79,8 +81,8 @@ class EditArticulo extends Component {
                               articuloId: data.articulo.id,
                               articulo: {
                                 titulo: titulo.value,
+                                cuerpo: cuerpo,
                               },
-                              fragmentos: cuerpo
                             }
                           }).then(() => {
                             window.location.href = `/articulo/${this.props.match.params.id}`;
@@ -89,49 +91,35 @@ class EditArticulo extends Component {
                         }}
                       />
                       {
-                        data.articulo.cuerpo.map((seccion)=>{
+                        data.articulo.cuerpo.map((seccion, index)=>{
                           const { fragmento } = seccion
                           switch (seccion.tipo) {
                             case 'texto':
-                            return fragmento.map(function(pieza, index){
                               return <div key={index} className="parrafo">
-                                      <label htmlFor="parrafo">Parrafo</label>
+                                      <i className="fas fa-trash delete" onClick={(e) => this.handleDeleteElement(e, seccion.id)}></i>
                                       <textarea
-                                        id={pieza.id}
+                                        id={seccion.id}
                                         style={{ minHeight: '150px'}}
-                                        defaultValue={pieza.valor}
+                                        defaultValue={seccion.valor}
                                       />
                                     </div>
-                            })
                             case 'titulo':
-                            return fragmento.map(function(pieza){
                               return <div className="parrafo">
-                                       <label htmlFor="subtitulo">Subtitulo</label>
-                                       <textarea id={pieza.id} name="subtitulo" className="agregar-subtitulo" defaultValue={pieza.valor} />
+                                       <i className="fas fa-trash delete" onClick={(e) => this.handleDeleteElement(e, seccion.id)}></i>
+                                       <textarea id={seccion.id} name="subtitulo" className="agregar-subtitulo" defaultValue={seccion.valor} />
                                      </div>
-                            })
                             case 'imagen':
-                            return fragmento.map(function(pieza){
                               return <div className="parrafo">
-                                <label htmlFor="imagen">Imagen</label>
-                                <input id={pieza.id} type="text" name="imagen" className="agregar-imagen" defaultValue={pieza.valor} />
+                                <input id={seccion.id} type="text" name="imagen" className="agregar-imagen" defaultValue={seccion.valor} />
                               </div>
-                            })
                             case 'video':
-                            return fragmento.map(function(pieza){
                               return <div className="parrafo">
-                                <label htmlFor="video">Video</label>
-                                <input id={pieza.id} type="text" name="video" className="agregar-video" defaultValue={pieza.valor} />
+                                <input id={seccion.id} type="text" name="video" className="agregar-video" defaultValue={seccion.valor} />
                               </div>
-                            })
                             case 'titulo poema':
-                            return fragmento.map(function(pieza){
-                              return <div key={pieza.id} className="seccion poemario">{pieza.valor}</div>
-                            })
+                              return <div key={seccion.id} className="seccion poemario">{seccion.valor}</div>
                             case 'verso':
-                            return fragmento.map(function(pieza){
-                              return <div key={pieza.id} className="texto poemario">{pieza.valor}</div>
-                            })
+                              return <div key={seccion.id} className="texto poemario">{seccion.valor}</div>
                             default:
                             return null
                           }

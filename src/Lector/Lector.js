@@ -18,9 +18,7 @@ class Lector extends Component {
             portada
             cuerpo{
               tipo
-              fragmento{
-                valor
-              }
+              valor
             }
           }
         }
