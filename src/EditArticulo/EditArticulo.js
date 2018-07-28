@@ -14,6 +14,7 @@ const EDIT_ARTICULO = gql`
 
 const imagenes = [
   'chinos',
+  'boda',
   'wasted',
   'pizza',
   'fiesta',
