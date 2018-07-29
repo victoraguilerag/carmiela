@@ -20,6 +20,14 @@ body{
   flex-flow: column nowrap;
   justify-content: center;
   align-items: center;
+  position: relative;
+}
+.edit {
+  color: #f25f70;
+  cursor: pointer;
+  position: absolute;
+  right: 6px;
+  top: 7px;
 }
 .header .titulo {
   font-family: 'Oswald';
@@ -131,9 +139,122 @@ body{
   min-height: 60vh;
 }
 
+.herramientas {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  width: 100%;
+  background: rgba(150,150,150,.1);
+  height: 50px;
+  position: absolute;
+}
+.herramienta {
+  width: 100px;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.herramienta:hover{
+  transition: 1s;
+  background: rgba(150,150,150,.3);
+}
 .Articulos {
   width: 100%;
+  min-height: 80vh;
   border-bottom: solid rgba(200,200,200,.3) 1px;
+  position: relative;
+}
+
+{
+  display: flex;
+  flex-flow: column wrap;
+  justify-content: center;
+  align-items: flex-start;
+}
+
+.parrafo {
+  width: 80%;
+  padding: 0 10%;
+  display: flex;
+  flex-flow: column wrap;
+  justify-content: center;
+  align-items: flex-start;
+  margin:  20px 0;
+  position: relative;
+}
+
+.parrafo .delete {
+  display: none;
+  position: absolute;
+  left: 20px;
+  top: 20px;
+  cursor: pointer;
+  color: red;
+}
+
+.parrafo:hover .delete {
+  display: block;
+}
+
+.parrafo textarea {
+  width: 95%;
+  padding: 2.5% 2.5%;
+  color: rgb(10, 10, 10);
+  font-family: "Source Sans Pro";
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 300;
+  margin: 0 auto;
+  resize: none;
+  transition: 1s all ease;
+  will-change: border;
+  border: none;
+  box-shadow: 0px 0px 2px 0 rgba(0, 0, 0, .3);
+}
+
+.parrafo textarea:focus {
+  transition: 1s all ease;
+  outline: 0 none;
+  will-change: border;
+  box-shadow: 0px 0px 2px 0 #f25f70;
+}
+
+.parrafo textarea.agregar-titulo {
+  font-family: 'Oswald';
+  font-weight: 300;
+  font-size: 1.5em;
+  letter-spacing: 2px;
+  color: rgba(0,0,0,.8);
+}
+
+.parrafo textarea.agregar-titulo:hover {
+  color: #e1122a;
+}
+
+.parrafo textarea.agregar-subtitulo {
+  font-family: 'Oswald';
+  font-weight: 300;
+  font-size: 21px !important;
+  color: rgba(30,30,30,.8);
+  letter-spacing: 2px;
+  font-weight: bold;
+  margin: 0 auto;
+}
+
+.parrafo input.agregar-video {
+  width: 80% !important;
+  margin: 0 auto;
+}
+
+.parrafo input.agregar-imagen {
+  width: 80%;
+  margin: 0 auto;
+}
+
+.parrafo input.agregar-fecha {
+  margin: 0 auto;
 }
 
 .Previa {
@@ -265,6 +386,41 @@ body{
   padding: 0 5%;
   line-height: 24px;
   margin-bottom: 25px;
+}
+.Articulo .texto.edit{
+  border: none;
+  width: 90%;
+  resize: none;
+  position: relative;
+}
+.Articulo .text.edit:focus{
+  border: lightblue solid thin;
+}
+
+.floatButton{
+  position: fixed;
+  color: white;
+  position: fixed;
+  top: 35%;
+  right: 5%;
+  border: none;
+  width: 120px;
+  height: 35px;
+  padding: 0 -4px;
+  background-color: #f25f70;
+  z-index: 200;
+  cursor: pointer;
+  border-radius: 2px;
+  font-weight: bold;
+  box-shadow: inset 0 -4px 0 0 rgba(50,50,50,.1);
+}
+.floatButton:focus{
+  border: none;
+  outline: none;
+}
+.floatButton:active {
+  border-radius: none;
+  background-color: #f13f70;
 }
 
 .Articulo .texto.poemario {
@@ -405,6 +561,13 @@ body{
   font-family: 'Source Sans Pro';
   color: rgba(50,50,50,.6);
   text-align: center;
+  cursor: pointer;
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
 }
 
 .experiencia .up {
@@ -436,6 +599,7 @@ body{
   background: rgba(40,40,40,1);
   font-family: 'Source Sans Pro';
   font-weight: bold;
+  position: relative;
 }
 
 .footer .simbolos {
@@ -617,7 +781,7 @@ body{
     margin-left: 40%;
     position: absolute;
     background: white;
-    bottom: 78px;
+    top: 35%;
     box-shadow: 0px 1px 2px rgba(0,0,0,.1);
   }
   .video {
@@ -629,12 +793,15 @@ body{
 }
 @media screen and (min-width: 800px) {
   .Layout {
-    width: 80%;
+    width: 90%;
     margin: 0 auto;
   }
   .Articulos {
     width: 70%;
     background-color: white;
+  }
+  .Articulos.agregar {
+    width: 100%;
   }
   .imagenArticulo {
     height: 40vh !important;
@@ -649,6 +816,7 @@ body{
   .redes {
     position: fixed;
     top: 40%;
+    right: 25px;
     width: 25%;
     margin: 0 3%;
     display: -ms-flexbox;
@@ -694,6 +862,7 @@ body{
     display: flex;
     position: absolute;
     right: 0;
+    bottom: 10px;
     width: 40%;
     font-size: 1.3em;
   }

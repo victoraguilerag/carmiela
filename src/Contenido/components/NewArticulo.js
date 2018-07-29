@@ -1,41 +1,31 @@
 import React from 'react'
+import { Link } from 'react-router-dom'
 
 function Articulos (props) {
-  console.log(props.articulo);
   return (
     <div className="Articulos">
       <div className="Articulo">
+        <Link to={`/articulo/edit/${props.articulo.id}`} className="edit">
+          <i className="fas fa-pencil-alt edit"></i>
+        </Link>
         <div id={props.articulo.portada} className="imagen"></div>
         <h2 className="titulo"><a>{props.articulo.titulo}</a></h2>
         {
 
           props.articulo.cuerpo.map((seccion)=>{
-            const { fragmento } = seccion
             switch (seccion.tipo) {
               case 'texto':
-                return fragmento.map(function(pieza){
-                  return <p key={pieza.valor} className="texto">{pieza.valor}</p>
-                })
+                  return <p key={seccion.valor} className="texto">{seccion.valor}</p>
               case 'titulo':
-                return fragmento.map(function(pieza){
-                  return <div key={pieza.valor} className="seccion">{pieza.valor}</div>
-                })
+                  return <div key={seccion.valor} className="seccion">{seccion.valor}</div>
               case 'imagen':
-                return fragmento.map(function(pieza){
-                  return <div key={pieza.valor} id={pieza.valor} className="imagenArticulo"/>
-                })
+                  return <div key={seccion.valor} id={seccion.valor} className="imagenArticulo"/>
               case 'video':
-                return fragmento.map(function(pieza){
-                  return <iframe key={pieza.valor} width="854" title={pieza.valor} className="video" height="480" src={`https://www.youtube.com/embed/${pieza.valor}`} frameBorder="0" allow="autoplay; encrypted-media" allowFullScreen></iframe>
-                })
+                  return <iframe key={seccion.valor} width="854" title={seccion.valor} className="video" height="480" src={`https://www.youtube.com/embed/${seccion.valor}`} frameBorder="0" allowFullScreen></iframe>
               case 'titulo poema':
-                return fragmento.map(function(pieza){
-                  return <div key={pieza.valor} className="seccion poemario">{pieza.valor}</div>
-                })
+                  return <div key={seccion.valor} className="seccion poemario">{seccion.valor}</div>
               case 'verso':
-                return fragmento.map(function(pieza){
-                  return <div key={pieza.valor} className="texto poemario">{pieza.valor}</div>
-                })
+                  return <div key={seccion.valor} className="texto poemario">{seccion.valor}</div>
               default:
                 return null
             }
