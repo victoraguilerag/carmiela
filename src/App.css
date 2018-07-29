@@ -247,6 +247,14 @@ body{
   width: 80% !important;
   margin: 0 auto;
 }
+.parrafo.edicion .agregar-video {
+  position: absolute;
+  bottom: 0;
+  color: white;
+  background: rgba(0,0,0,.2);
+  border: 0;
+  text-align: center;
+}
 
 .parrafo input.agregar-imagen {
   width: 80%;

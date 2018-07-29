@@ -151,19 +151,20 @@ class EditArticulo extends Component {
                                       />
                                     </div>
                             case 'titulo':
-                              return <div className="parrafo">
+                              return <div key={index} className="parrafo">
                                        <i className="fas fa-trash delete" onClick={(e) => this.handleDeleteElement(e, seccion.id)}></i>
                                        <textarea id={seccion.id} name="subtitulo" className="agregar-subtitulo" defaultValue={seccion.valor} />
                                      </div>
                             case 'imagen':
-                              return <div id={seccion.id}>
+                              return <div key={index} id={seccion.id}>
                                 <div id={seccion.valor} className="imagenArticulo">
                                   <ImagePicker imagenes={imagenes} />
                                 </div>
                               </div>
                             case 'video':
-                              return <div className="parrafo">
+                              return <div key={index} className="parrafo edicion">
                                 <input id={seccion.id} type="text" name="video" className="agregar-video" defaultValue={seccion.valor} />
+                                <iframe key={seccion.valor} width="854" title={seccion.valor} className="video" height="480" src={`https://www.youtube.com/embed/${seccion.valor}`} frameBorder="0" allowFullScreen></iframe>
                               </div>
                             case 'titulo poema':
                               return <div key={seccion.id} className="seccion poemario">{seccion.valor}</div>
