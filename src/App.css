@@ -648,6 +648,10 @@ body{
   height: 100px;
 }
 
+.Articulo.nuevo .portada {
+  border: solid thin lightgray;
+}
+
 /* Articulo 0 */
 
 
