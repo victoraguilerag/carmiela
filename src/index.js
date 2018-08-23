@@ -9,7 +9,7 @@ import gql from "graphql-tag";
 import { ApolloProvider } from "react-apollo"
 
 const client = new ApolloClient({
-  uri: "http://localhost:3001/graphql"
+  uri: "https://carmiela-back-rsitbcpfwz.now.sh/graphql"
 });
 
 client.query({
