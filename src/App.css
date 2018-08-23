@@ -247,6 +247,14 @@ body{
   width: 80% !important;
   margin: 0 auto;
 }
+.parrafo.edicion .agregar-video {
+  position: absolute;
+  bottom: 0;
+  color: white;
+  background: rgba(0,0,0,.2);
+  border: 0;
+  text-align: center;
+}
 
 .parrafo input.agregar-imagen {
   width: 80%;
@@ -616,11 +624,36 @@ body{
   margin: 0 auto
 }
 
+.imagenArticulo:hover .imagePicker{
+  display: flex;
+}
+
+.imagePicker {
+  display: none;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+}
+
+.imagenes {
+  width: 100%;
+  height: 300px;
+  display: flex;
+  flex-flow: row wrap;
+  overflow-y: scroll;
+}
+
+.imagenes .imagen {
+  width: 25%;
+  height: 100px;
+}
+
+.Articulo.nuevo .portada {
+  border: solid thin lightgray;
+}
+
 /* Articulo 0 */
 
-#boda {
-  background: url(./Assets/boda.jpg);
-}
 
 .footer {
   width: 100%;
@@ -634,6 +667,10 @@ body{
 
 #chinos {
   background: url("./Assets/chinos.jpg");
+}
+
+#boda {
+  background: url(./Assets/boda.jpg);
 }
 
 /* Articulo 1 */
@@ -660,15 +697,10 @@ body{
 }
 #flowerboy-2 {
   background: url(./Assets/flowerboy-2.jpg);
-  width: 500px;
-  height: 600px;
 }
 #flowerboy-3 {
   background: url(./Assets/flowerboy-3.gif);
   background-size: cover;
-  width: 450px !important;
-  height: 600px;
-  margin: 0 auto;
 }
 #flowerboy-5 {
   background: url(./Assets/flowerboy-5.gif)

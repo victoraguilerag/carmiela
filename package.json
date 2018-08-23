@@ -2,6 +2,7 @@
   "name": "carmiela",
   "version": "0.1.0",
   "private": true,
+  "homepage": "./",
   "dependencies": {
     "apollo-boost": "^0.1.9",
     "graphql": "^0.13.2",

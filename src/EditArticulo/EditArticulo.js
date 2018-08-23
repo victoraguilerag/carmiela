@@ -1,5 +1,6 @@
 import React, {Component} from 'react'
 import { Query, Mutation } from 'react-apollo'
+import ImagePicker from '../ImagePicker/components/image-picker'
 import gql from 'graphql-tag'
 
 const EDIT_ARTICULO = gql`
@@ -10,6 +11,42 @@ const EDIT_ARTICULO = gql`
       }
     }
   `
+
+const imagenes = [
+  'chinos',
+  'boda',
+  'wasted',
+  'pizza',
+  'fiesta',
+  'hell',
+  'varas',
+  'poemario',
+  'flowerboy',
+  'flowerboy-2',
+  'flowerboy-3',
+  'flowerboy-5',
+  'scientology',
+  'scientology-1',
+  'scientology-2',
+  'brazil',
+  'brazil-1',
+  'brazil-2',
+  'brazil-3',
+  'brazil-4',
+  'brazil-5',
+  'brazil-6',
+  'brazil-7',
+  'revolucion',
+  'revolucion-1',
+  'revolucion-2',
+  'revolucion-3',
+  'illuminati',
+  'benito',
+  'benito-1',
+  'benito-2',
+  'hero',
+  'experiencia',
+]
 
 class EditArticulo extends Component {
   handleDeleteElement = (e,id) => {
@@ -58,7 +95,11 @@ class EditArticulo extends Component {
                     <div className="Articulo">
                       { loading && <div> Loading </div>}
                       { error && <div> Error `${error}` </div>}
-                      <div id={data.articulo.portada} className="imagen"></div>
+                      <div id="portada">
+                        <div id={data.articulo.portada} className="imagenArticulo">
+                          <ImagePicker imagenes={imagenes} />
+                        </div>
+                      </div>
                       <div className="parrafo">
                         <label htmlFor="titulo">Titulo</label>
                         <textarea onChange={this.updateElement} id="titulo" className="agregar-titulo" defaultValue={data.articulo.titulo}/>
@@ -70,18 +111,24 @@ class EditArticulo extends Component {
                             if (newData) {
                               return cuerpo.push({
                                 id: newData.id,
-                                tipo: newData.tipo,
-                                valor: newData.value
+                                tipo: seccion.tipo,
+                                valor: (seccion.tipo === 'imagen')
+                                ?
+                                  newData.childNodes[0].id
+                                :
+                                  newData.value,
                               })
                             }
                           })
                           const titulo = document.getElementById("titulo")
+                          const portada = document.getElementById("portada")
                           await editArticulo({
                             variables: {
                               articuloId: data.articulo.id,
                               articulo: {
                                 titulo: titulo.value,
                                 cuerpo: cuerpo,
+                                portada: portada.childNodes[0].id,
                               },
                             }
                           }).then(() => {
@@ -104,17 +151,20 @@ class EditArticulo extends Component {
                                       />
                                     </div>
                             case 'titulo':
-                              return <div className="parrafo">
+                              return <div key={index} className="parrafo">
                                        <i className="fas fa-trash delete" onClick={(e) => this.handleDeleteElement(e, seccion.id)}></i>
                                        <textarea id={seccion.id} name="subtitulo" className="agregar-subtitulo" defaultValue={seccion.valor} />
                                      </div>
                             case 'imagen':
-                              return <div className="parrafo">
-                                <input id={seccion.id} type="text" name="imagen" className="agregar-imagen" defaultValue={seccion.valor} />
+                              return <div key={index} id={seccion.id}>
+                                <div id={seccion.valor} className="imagenArticulo">
+                                  <ImagePicker imagenes={imagenes} />
+                                </div>
                               </div>
                             case 'video':
-                              return <div className="parrafo">
+                              return <div key={index} className="parrafo edicion">
                                 <input id={seccion.id} type="text" name="video" className="agregar-video" defaultValue={seccion.valor} />
+                                <iframe key={seccion.valor} width="854" title={seccion.valor} className="video" height="480" src={`https://www.youtube.com/embed/${seccion.valor}`} frameBorder="0" allowFullScreen></iframe>
                               </div>
                             case 'titulo poema':
                               return <div key={seccion.id} className="seccion poemario">{seccion.valor}</div>
